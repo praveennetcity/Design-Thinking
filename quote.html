@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
-    <script src="js/utility.js"></script>
+    
 </head>
   <body>
 
@@ -70,128 +70,212 @@
 
 
     <!-- Residential Flow Start-->
-    
+    <div class="container" style="margin-top:20px">
+        <div class="row justify-content-md-center">
+            <h3>Select an option to get the “Best-Fit” Solar Recommendation</h3>
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">I Know my Electricity Bill</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">I Know my Appliances</button>
+                </li>
+                
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row"> 
+                        <form>
+                        <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Monthly EB Bill</label>
+                              <input type="email" class="form-control" id="monthlyEBbill">
+                            </div>
+                        </div>
+                        <div>Select each of the appliances below that you run “regularly” ?</div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Dishwasher
+                                    </label>
+                                  </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Induction stove
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Microwave oven
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Geysers
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    AC/Heaters
+                                  </label>
+                                </div>
+                              </div>
+                              
+                        </div>
 
+                        <div class="row justify-content-center">
+                            <button type="submit" class="btn btn-primary">Calculate my Savings</button>
+                            </div>
+                          
+                          </form>
+
+                    </div>
+                   
+                
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <form>    
+                <div class="row">
+                   
+                  <div class="col-md-6">  
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Fans</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                      </div>
+                    </div>
+                    <div class="col-md-6">  
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">Lights </span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                          </div>
+                        </div>
+                        <div class="col-md-6">  
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text" id="inputGroup-sizing-lg">TV</span>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                              </div>
+                            </div>
+                            <div class="col-md-6">  
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text" id="inputGroup-sizing-lg">Kitchen Appliances</span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                                  </div>
+                                </div>
+                                <div class="col-md-6">  
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">Laptops</span>
+                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                                      </div>
+                                    </div>
+
+                </div>
+                <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary">Calculate my Savings</button>
+                </div>
+                </form>
+
+
+
+                </div>
+               
+              </div>
+      
+        </div>
+    </div>
     <!-- Residential Flow End -->
 
     <!-- Button End-->
 
-     <!-- Feature Start 
-     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="btn-lg-square bg-primary rounded-circle me-3">
-                            <i class="fa fa-users text-white"></i>
-                        </div>
-                        <h1 class="mb-0" data-toggle="counter-up">3453</h1>
-                    </div>
-                    <h5 class="mb-3">Happy Customers</h5>
-                    <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit</span>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="btn-lg-square bg-primary rounded-circle me-3">
-                            <i class="fa fa-check text-white"></i>
-                        </div>
-                        <h1 class="mb-0" data-toggle="counter-up">4234</h1>
-                    </div>
-                    <h5 class="mb-3">Project Done</h5>
-                    <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit</span>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="btn-lg-square bg-primary rounded-circle me-3">
-                            <i class="fa fa-award text-white"></i>
-                        </div>
-                        <h1 class="mb-0" data-toggle="counter-up">3123</h1>
-                    </div>
-                    <h5 class="mb-3">Awards Win</h5>
-                    <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit</span>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="btn-lg-square bg-primary rounded-circle me-3">
-                            <i class="fa fa-users-cog text-white"></i>
-                        </div>
-                        <h1 class="mb-0" data-toggle="counter-up">1831</h1>
-                    </div>
-                    <h5 class="mb-3">Expert Workers</h5>
-                    <span>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Feature Start -->
+    
 
-    <!-- Projects Start 
-    <div class="container-xxl py-5">
+    
+    <!-- Projects End -->
+
+
+      <!-- Footer Start -->
+      <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Address</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Project Gallery</h5>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-4.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-5.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="text-primary">Our Projects</h6>
-                <h1 class="mb-4">Visit Our Latest Solar And Renewable Energy Projects</h1>
-            </div>
-            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-5" id="portfolio-flters">
-                        <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".first">Solar Panels</li>
-                        <li class="mx-2" data-filter=".second">Wind Turbines</li>
-                        <li class="mx-2" data-filter=".third">Hydropower Plants</li>
-                    </ul>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                      
+                    </div>
+                   
                 </div>
-            </div>
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-6.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Solar Panels</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-5.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Wind Turbines</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item third">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/img-600x400-4.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/img-600x400-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="pt-3">
-                        <p class="text-primary mb-0">Hydropower Plants</p>
-                        <hr class="text-primary w-25 my-2">
-                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
-                    </div>
-                </div>
-                
-               
-                
             </div>
         </div>
     </div>
-    <!-- Projects End -->
+    <!-- Footer End -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/utility.js"></script>
   </body>
 </html>

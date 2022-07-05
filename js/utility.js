@@ -3,6 +3,6 @@ function hideSignIn(){
    $("#signup").show();
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
     $("#signup").hide();
 });
