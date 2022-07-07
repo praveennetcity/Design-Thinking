@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
-    
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>
   <body>
 
@@ -39,14 +39,14 @@
     </div>
 
     <!-- Button Start-->
-    <div class="container">
+    <div class="container" id="calculatortypes">
         <div class="row justify-content-md-center gap-3">
             <div class="card" style="width: 18rem;">
                 <img src="img/gallery-3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Residential</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Residential</a>
+                  <a href="#"  onclick="showCalculator();" class="btn btn-primary">Residential</a>
                 </div>
               </div>
               <div class="card" style="width: 18rem;">
@@ -67,12 +67,18 @@
               </div>
       </div>
     </div>
+<!-- Complete Calculator start -->
 
-
+    
     <!-- Residential Flow Start-->
-    <div class="container" style="margin-top:20px">
+    <div class="container" style="margin-top:20px" id="calculatorEnter">
+
+      <div class="container" style="margin-bottom:20px">
+        <h3>Select an option to get the “Best-Fit” Solar Recommendation</h3>  
+      </div>
+
         <div class="row justify-content-md-center">
-            <h3>Select an option to get the “Best-Fit” Solar Recommendation</h3>
+           
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">I Know my Electricity Bill</button>
@@ -85,64 +91,73 @@
               <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="row"> 
-                        <form>
-                        <div class="col-3">
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Monthly EB Bill</label>
-                              <input type="email" class="form-control" id="monthlyEBbill">
-                            </div>
-                        </div>
-                        <div>Select each of the appliances below that you run “regularly” ?</div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Dishwasher
-                                    </label>
+                      <div class="col-lg-6">
+                           <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title"></h5>
+                  
+                                <!-- Vertical Form -->
+                                <form class="row g-3">
+                                  <div class="col-12">
+                                    <label for="inputEmail4" class="form-label">Select your state</label>
+                                    <select class="form-select  mb-3" onChange="updateStateDropDown()" id="entryselect">
+                    
+                                      <option value="" selected="">Select your state</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/goa/">Goa</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/puducherry/">Puducherry</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/dadra-nagar-haveli/">Dadra and Nagar Haveli</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/daman-diu/">Daman and Diu</option>
+                                       <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/andaman-nicobar-islands/">Andaman and Nicobar Islands</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/chandigarh/">Chandigarh</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/lakshadweep/">Lakshadweep</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/jharkhand/">Jharkhand</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/jammu-kashmir/">Jammu and Kashmir</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/meghalaya/">Meghalaya</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/kerala/">Kerala</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/odisha/">Odisha</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/assam/">Assam</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/west-bengal/">West Bengal</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/uttarakhand/">Uttarakhand</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/punjab/" selected="">Punjab</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/maharashtra/">Maharashtra</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/himachal-pradesh/">Himachal Pradesh</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/sikkim/">Sikkim</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/bihar/">Bihar</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/manipur/">Manipur</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/chhattisgarh/">Chhattisgarh</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/mizoram/">Mizoram</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/madhya-pradesh/">Madhya Pradesh</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/gujrat/">Gujarat</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/rajasthan/">Rajasthan</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/tripura/">Tripura</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/tamil-nadu/">Tamil Nadu</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/karnataka/">Karnataka</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/telangana/">Telangana</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/haryana/">Haryana</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/uttar-pradesh/">Uttar Pradesh</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/andhra-pradesh/">Andhra Pradesh</option>
+                                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/delhi/">Delhi</option>
+                                      
+                                  </select>
                                   </div>
-                            </div>
-                            <div class="col-md-3">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Induction stove
-                                </label>
+                                  <div class="col-12">
+                                    <label for="inputEmail4" class="form-label">Electrcity Bill</label>
+                                    <input type="text" class="form-control" id="inputEmail4">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="inputEmail4" class="form-label">Number of People</label>
+                                    <input type="text" class="form-control" id="inputPassword4">
+                                  </div>
+                                  
+                                  <div class="text-center">
+                                    <button type="submit" onclick="calculateSavings();" class="btn btn-primary">Calculate my Savings</button>
+                                   
+                                  </div>
+                                </form><!-- Vertical Form -->
+                  
                               </div>
                             </div>
-                            <div class="col-md-3">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Microwave oven
-                                </label>
-                              </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                  <label class="form-check-label" for="flexCheckChecked">
-                                    Geysers
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="col-md-3">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                  <label class="form-check-label" for="flexCheckChecked">
-                                    AC/Heaters
-                                  </label>
-                                </div>
-                              </div>
-                              
-                        </div>
-
-                        <div class="row justify-content-center">
-                            <button type="submit" class="btn btn-primary">Calculate my Savings</button>
-                            </div>
-                          
-                          </form>
-
+                       </div>
                     </div>
                    
                 
@@ -151,41 +166,43 @@
                     <form>    
                 <div class="row">
                    
-                  <div class="col-md-6">  
-                    <div class="input-group input-group-lg">
-                        <span class="input-group-text" id="inputGroup-sizing-lg">Fans</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                      </div>
-                    </div>
-                    <div class="col-md-6">  
-                        <div class="input-group input-group-lg">
-                            <span class="input-group-text" id="inputGroup-sizing-lg">Lights </span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                          </div>
-                        </div>
-                        <div class="col-md-6">  
-                            <div class="input-group input-group-lg">
-                                <span class="input-group-text" id="inputGroup-sizing-lg">TV</span>
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                              </div>
+                  <div class="">  
+                    <div class="col-lg-6">
+                      <div class="card">
+                         <div class="card-body">
+                           <h5 class="card-title">Appliances</h5>
+             
+                           <!-- Vertical Form -->
+                           <form class="row">
+                             <div class="col-12">
+                               <label for="inputNanme4" class="form-label">Fans</label>
+                               <input type="text" class="form-control" id="inputNanme4">
+                             </div>
+                             <div class="col-12">
+                               <label for="inputEmail4" class="form-label">TV</label>
+                               <input type="text" class="form-control" id="inputEmail4">
+                             </div>
+                             <div class="col-12">
+                               <label for="inputEmail4" class="form-label">Kitchen Appliances</label>
+                               <input type="text" class="form-control" id="inputPassword4">
+                             </div>
+                             <div class="col-12">
+                              <label for="inputEmail4" class="form-label">Lights</label>
+                              <input type="text" class="form-control" id="inputPassword4">
                             </div>
-                            <div class="col-md-6">  
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-text" id="inputGroup-sizing-lg">Kitchen Appliances</span>
-                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                                  </div>
-                                </div>
-                                <div class="col-md-6">  
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-text" id="inputGroup-sizing-lg">Laptops</span>
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                                      </div>
-                                    </div>
-
+                             
+                             
+                             <div class="text-center" style="margin-top:20px">
+                               <button type="submit" onclick="calculateSavings();" class="btn btn-primary">Calculate my Savings</button>
+                            
+                             </div>
+                           </form><!-- Vertical Form -->
+             
+                         </div>
+                       </div>
+                  </div>
                 </div>
-                <div class="row justify-content-center">
-                <button type="submit" class="btn btn-primary">Calculate my Savings</button>
-                </div>
+               
                 </form>
 
 
@@ -195,53 +212,425 @@
               </div>
       
         </div>
+
+
+        
+
     </div>
     <!-- Residential Flow End -->
-
+    <div id="calculatorstart">
     <!-- Calculator Show -->
-
     <div class="container">
-        <div class="row justify-content-md-center gap-3">
-            <div class="card" style="width: 18rem;">
-                <img src="img/gallery-3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Selected Solar System Size</h5>
-                  <p class="card-text">Area required 700.</p>
-                  
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-coin"></i></i></a>
-                <div class="card-body">
-                  <h5 class="card-title">Your Monthly Bill</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Commercial</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="img/gallery-2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Your Contribution to the Environment</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Industry</a>
-                </div>
-              </div>
+      <div class="row">
+       <div class="col-lg-3 col-xl-3 mb-4">
+        <div  class="card bg-warning border-0">
+          <div  class="card-body">
+            <h5  class="text-white-50">Solar System Size</h5>
+            <div  class="mb-4"><span  class="display-4 text-white">7.5 KW</span>
+              <span  class="text-white-50">Area required 750 sqft </span></div>
+              <!-- <div  class="progress  rounded-pill" style="height: 0.5rem;">
+              <div  role="progressbar" aria-valuenow="75" aria-valuemin="0"
+               aria-valuemax="100" class="progress-bar  w-100 rounded-pill"></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xl-3 mb-4">
+        <div  class="card bg-danger border-0">
+          <div  class="card-body">
+            <h5  class="text-white-50">Your Current EB Bill</h5>
+            <div  class="mb-4"><span  class="display-4 text-white">$100k</span>
+              <span  class="text-white-50"></span></div>
+              <div  class="progress  rounded-pill" style="height: 0.5rem;">
+              <div  role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" class="progress-bar  w-100 rounded-pill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xl-3 mb-4">
+        <div  class="card bg-success border-0">
+          <div  class="card-body">
+            <h5  class="text-white-50">Your Solar Bill</h5>
+            <div  class="mb-4"><span  class="display-4 text-white">$25k</span>
+              <span  class="text-white-50"> </span></div>
+              <div  class="progress bg-white-25 rounded-pill" style="height: 0.5rem;">
+              <div  role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" class="progress-bar  w-25 rounded-pill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xl-3 mb-4">
+        <div  class="card bg-primary border-0">
+          <div  class="card-body">
+            <h5  class="text-white-50">Rate of Interest</h5>
+            <div  class="mb-4"><span  class="display-4 text-white">$400k</span>
+              <span  class="text-white-50"> per year</span></div>
+              <div  class="progress bg-white-25 rounded-pill" style="height: 0.5rem;">
+              <div  role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-white w-75 rounded-pill"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    </div>
 
+    <!-- Contribution start-->
+    <div class="container">
+      <div class="row gx-4 justify-content-center">
+        <div  class="col-xl-5 col-lg-6 col-md-8 col-sm-11 mt-4">
+          <div  class="card text-center h-100">
+            <div  class="card-body px-5 pt-5 d-flex flex-column">
+              <div >
+                <div  class="h3 text-primary fw-300">Your Contribution to the Environment</div>
+               
+                <p><i class="bi bi-tree-fill" style="font-size:36px;color:green"> </i>
+                  <span>269 Trees added</span> </p>
+                  <p>
+                    <i class="bx bx-car" style="font-size:36px;color:red"> </i>
+                   <span>15 Cars of the road</span>  
+                  </p>
+                
+               
+              </div>
+                <div  class="icons-org-create align-items-center mx-auto mt-auto">
+                  </div></div>
     
+      <div  class="card-footer bg-transparent px-5 py-4">
+      <div  class="small text-center"><div  class="d-grid">
+       
+        </div></div>
+      </div></div>
+    </div>
+    <div  class="col-xl-5 col-lg-6 col-md-8 col-sm-11 mt-4">
+      <div  class="card text-center h-100">
+        <div  class="card-body px-5 pt-5 d-flex flex-column align-items-between"><div >
+          <div  class="h3 text-primary fw-300">Your HighLights</div>
+          <p  class="text-muted mb-4"> Start Saving 51% from Day 1</p>
+          <p  class="text-muted mb-4"> System Cost 2.9 Lakhs</p>
+          <p  class="text-muted mb-4"> Return On Investment 2.9 Lakhs</p>
+        </div>
+          <div  class="icons-org-join align-items-center mx-auto">
+           
+  </div></div>
+    <div  class="card-footer bg-transparent px-5 py-4">
+      <div class="small text-center"><div class="d-grid">
+      </div></div></div></div></div></div>
+    </div>
+
+
+    <div class="container">
+      <div class="row column1">
+        <div class="col-md-12">
+           <div class="white_shd full margin_bottom_30">
+              <div class="full graph_head">
+                 <div class="heading1 margin_0">
+                    <h2>Pricing Table</h2>
+                 </div>
+              </div>
+              <div class="full price_table padding_infor_info">
+                 <div class="row">
+                    <!-- column price --> 
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                       <div class="table_price full">
+                          <div class="inner_table_price">
+                             <div class="price_table_head blue1_bg">
+                                <h2>Basic</h2>
+                             </div>
+                             <div class="price_table_inner">
+                                <div class="cont_table_price_blog">
+                                   <p class="blue1_color">$ <span class="price_no">18</span> Monthly</p>
+                                </div>
+                                <div class="cont_table_price">
+                                   <ul>
+                                      <li><a href="#">24/7 Tech Support</a></li>
+                                      <li><a href="#">25 Analytics Compaign</a></li>
+                                      <li><a href="#">Solar Panels</a></li>
+                                      
+                                   </ul>
+                                </div>
+                             </div>
+                             <div class="price_table_bottom">
+                                <div class="center"><a class="main_bt" href="#">Buy Now</a></div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <!-- end column price -->
+                    <!-- column price --> 
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                       <div class="table_price full">
+                          <div class="inner_table_price">
+                             <div class="price_table_head green_bg">
+                                <h2>Standard</h2>
+                             </div>
+                             <div class="price_table_inner">
+                                <div class="cont_table_price_blog">
+                                   <p class="green_color">$ <span class="price_no">25</span> Monthly</p>
+                                </div>
+                                <div class="cont_table_price">
+                                   <ul>
+                                      <li><a href="#">24/7 Tech Support</a></li>
+                                      <li><a href="#">25 Analytics Compaign</a></li>
+                                      <li><a href="#">Solar Panels</a></li>
+                                      
+                                   </ul>
+                                </div>
+                             </div>
+                             <div class="price_table_bottom">
+                                <div class="center"><a class="main_bt" href="#">Buy Now</a></div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <!-- end column price -->
+                    <!-- column price --> 
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                       <div class="table_price full">
+                          <div class="inner_table_price">
+                             <div class="price_table_head red_bg">
+                                <h2>Plus</h2>
+                             </div>
+                             <div class="price_table_inner">
+                                <div class="cont_table_price_blog">
+                                   <p class="red_color">$ <span class="price_no">32</span> Monthly</p>
+                                </div>
+                                <div class="cont_table_price">
+                                   <ul>
+                                      <li><a href="#">24/7 Tech Support</a></li>
+                                      <li><a href="#">25 Analytics Compaign</a></li>
+                                      <li><a href="#">Solar Panels</a></li>
+                                     
+                                   </ul>
+                                </div>
+                             </div>
+                             <div class="price_table_bottom">
+                                <div class="center"><a class="main_bt" href="#">Buy Now</a></div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <!-- end column price -->
+                    <!-- column price --> 
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                       <div class="table_price full">
+                          <div class="inner_table_price">
+                             <div class="price_table_head yellow_bg">
+                                <h2>Premium</h2>
+                             </div>
+                             <div class="price_table_inner">
+                                <div class="cont_table_price_blog">
+                                   <p class="yellow_color">$ <span class="price_no">48</span> Monthly</p>
+                                </div>
+                                <div class="cont_table_price">
+                                   <ul>
+                                      <li><a href="#">24/7 Tech Support</a></li>
+                                      <li><a href="#">25 Analytics Compaign</a></li>
+                                      <li><a href="#">Solar Panels</a></li>
+                                   
+                                   </ul>
+                                </div>
+                             </div>
+                             <div class="price_table_bottom">
+                                <div class="center"><a class="main_bt" href="#">Buy Now</a></div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <!-- end column price -->
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+    </div>
+<!-- SOlar details-->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6">
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Solar Policy in Your State
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <select class="form-select form-select-lg mb-3" id="stateselect">
+                    
+                      <option value="" selected="">Select your state</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/goa/">Goa</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/puducherry/">Puducherry</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/dadra-nagar-haveli/">Dadra and Nagar Haveli</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/daman-diu/">Daman and Diu</option>
+                       <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/andaman-nicobar-islands/">Andaman and Nicobar Islands</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/chandigarh/">Chandigarh</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/lakshadweep/">Lakshadweep</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/jharkhand/">Jharkhand</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/jammu-kashmir/">Jammu and Kashmir</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/meghalaya/">Meghalaya</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/kerala/">Kerala</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/odisha/">Odisha</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/assam/">Assam</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/west-bengal/">West Bengal</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/uttarakhand/">Uttarakhand</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/punjab/" selected="">Punjab</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/maharashtra/">Maharashtra</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/himachal-pradesh/">Himachal Pradesh</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/sikkim/">Sikkim</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/bihar/">Bihar</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/manipur/">Manipur</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/chhattisgarh/">Chhattisgarh</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/mizoram/">Mizoram</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/madhya-pradesh/">Madhya Pradesh</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/gujrat/">Gujarat</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/rajasthan/">Rajasthan</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/tripura/">Tripura</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/tamil-nadu/">Tamil Nadu</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/karnataka/">Karnataka</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/telangana/">Telangana</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/haryana/">Haryana</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/uttar-pradesh/">Uttar Pradesh</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/andhra-pradesh/">Andhra Pradesh</option>
+                      <option value="https://www.itsmysun.com/rooftop-solar-applicable-policies/delhi/">Delhi</option>
+                      
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Frequently Asked Questions
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  What is a Solar PV System and how does...
+                  Does a Solar PV system produce same...
+                  What factors are important to consider when....
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+        <div class="row" style="margin-top:20px">
+        <div class="col-md-6">
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Everything you need to
+                  know about going solar
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        
+
+
+      </div>
+
+    </div>
   
 
+    <!-- <div class="container">
+      
+      <div class="row column1">
+        <div class="col-md-6 col-lg-3">
+           <div class="full counter_section margin_bottom_30 yellow_bg">
+              <div class="couter_icon">
+                 <div> 
+                    <i class="fa fa-user"></i>
+                 </div>
+              </div>
+              <div class="counter_no">
+                 <div>
+                    <p class="total_no">2500</p>
+                    <p class="head_couter">Welcome</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+           <div class="full counter_section margin_bottom_30 blue1_bg">
+              <div class="couter_icon">
+                 <div> 
+                    <i class="fa fa-clock-o"></i>
+                 </div>
+              </div>
+              <div class="counter_no">
+                 <div>
+                    <p class="total_no">123.50</p>
+                    <p class="head_couter">Average Time</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+           <div class="full counter_section margin_bottom_30 green_bg">
+              <div class="couter_icon">
+                 <div> 
+                    <i class="fa fa-cloud-download"></i>
+                 </div>
+              </div>
+              <div class="counter_no">
+                 <div>
+                    <p class="total_no">1,805</p>
+                    <p class="head_couter">Collections</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+           <div class="full counter_section margin_bottom_30 red_bg">
+              <div class="couter_icon">
+                 <div> 
+                    <i class="fa fa-comments-o"></i>
+                 </div>
+              </div>
+              <div class="counter_no">
+                 <div>
+                    <p class="total_no">54</p>
+                    <p class="head_couter">Comments</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+    
+    </div> -->
+
+  </div>
+<!-- Complete Calculator End -->
 
       <!-- Footer Start -->
       <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                   
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -280,14 +669,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
+               
             </div>
         </div>
         <div class="container">
