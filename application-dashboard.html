@@ -1,721 +1,854 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths cssscrollbar"><head>
+  <title>Adminty - Premium Admin Template by Colorlib </title>
+  
+  
+  <!--[if lt IE 10]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+  
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="solar.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">APP Admin</span>
-      </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
-
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
-
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
-
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
-          </a>
-        </li><!-- End Search Icon-->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-            <li class="dropdown-header">
-              You have 4 new notifications
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-exclamation-circle text-warning"></i>
-              <div>
-                <h4>Lorem Ipsum</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>30 min. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-x-circle text-danger"></i>
-              <div>
-                <h4>Atque rerum nesciunt</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>1 hr. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-check-circle text-success"></i>
-              <div>
-                <h4>Sit rerum fuga</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>2 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-info-circle text-primary"></i>
-              <div>
-                <h4>Dicta reprehenderit</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>4 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li class="dropdown-footer">
-              <a href="#">Show all notifications</a>
-            </li>
-
-          </ul><!-- End Notification Dropdown Items -->
-
-        </li><!-- End Notification Nav -->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
-          </a><!-- End Messages Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            <li class="dropdown-header">
-              You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Maria Hudson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>4 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
-            </li>
-
-          </ul><!-- End Messages Dropdown Items -->
-
-        </li><!-- End Messages Nav -->
-
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.png" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">APP Admin</span>
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>APP Admin</h6>
-              <span>Adminstrator</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
-
-      </ul>
-    </nav><!-- End Icons Navigation -->
-
-  </header><!-- End Header -->
-
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-
-    <ul class="sidebar-nav" id="sidebar-nav">
-
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
-        
-    </ul>
-
-  </aside><!-- End Sidebar-->
-
-  <main id="main" class="main">
-
-    <div class="pagetitle">
-      <h1>Dashboard</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <section class="section dashboard">
-      <div class="row">
-
-        <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row">
-
-            <!-- Sales Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Sales <span>| Today</span></h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-cart"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>145</h6>
-                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div><!-- End Sales Card -->
-
-            <!-- Revenue Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card revenue-card">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Revenue <span>| This Month</span></h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-currency-dollar"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>₹124200</h6>
-                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div><!-- End Revenue Card -->
-
-            <!-- Customers Card -->
-            <div class="col-xxl-4 col-xl-12">
-
-              <div class="card info-card customers-card">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Customers <span>| This Year</span></h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>1244</h6>
-                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div><!-- End Customers Card -->
-
-            <!-- Reports -->
-            <div class="col-12">
-              <div class="card">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Reports <span>/Today</span></h5>
-
-                  <!-- Line Chart -->
-                  <div id="reportsChart"></div>
-
-                  <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                      new ApexCharts(document.querySelector("#reportsChart"), {
-                        series: [{
-                          name: 'Sales',
-                          data: [31, 40, 28, 51, 42, 82, 56],
-                        }, {
-                          name: 'Revenue',
-                          data: [11, 32, 45, 32, 34, 52, 41]
-                        }, {
-                          name: 'Customers',
-                          data: [15, 11, 32, 18, 9, 24, 11]
-                        }],
-                        chart: {
-                          height: 350,
-                          type: 'area',
-                          toolbar: {
-                            show: false
-                          },
-                        },
-                        markers: {
-                          size: 4
-                        },
-                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
-                        fill: {
-                          type: "gradient",
-                          gradient: {
-                            shadeIntensity: 1,
-                            opacityFrom: 0.3,
-                            opacityTo: 0.4,
-                            stops: [0, 90, 100]
-                          }
-                        },
-                        dataLabels: {
-                          enabled: false
-                        },
-                        stroke: {
-                          curve: 'smooth',
-                          width: 2
-                        },
-                        xaxis: {
-                          type: 'datetime',
-                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-                        },
-                        tooltip: {
-                          x: {
-                            format: 'dd/MM/yy HH:mm'
-                          },
-                        }
-                      }).render();
-                    });
-                  </script>
-                  <!-- End Line Chart -->
-
-                </div>
-
-              </div>
-            </div><!-- End Reports -->
-
-            <!-- Recent Sales -->
-            <div class="col-12">
-              <div class="card recent-sales overflow-auto">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Recent Solar Request <span>| Today</span></h5>
-
-                  <table class="table table-borderless datatable">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Customer</th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>Brandon Jacob</td>
-                        <td><a href="#" class="text-primary">Solar - Package SPI-SM-101</a></td>
-                        <td>₹4500</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2147</a></th>
-                        <td>Bridie Kessler</td>
-                        <td><a href="#" class="text-primary">Solar - Package SPI-SM-101 - Custom</a></td>
-                        <td>₹4000</td>
-                        <td><span class="badge bg-warning">Pending</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2049</a></th>
-                        <td>Ashleigh Langosh</td>
-                        <td><a href="#" class="text-primary">Solar - Package SPI-MD-202</a></td>
-                        <td>₹20000</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Angus Grady</td>
-                        <td><a href="#" class="text-primar">Solar - Package SPI-SM-101 - Custom</a></td>
-                        <td>₹3500</td>
-                        <td><span class="badge bg-danger">Rejected</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Lg Polytechnic</td>
-                        <td><a href="#" class="text-primary">Solar - Package SPI-LG-302</a></td>
-                        <td>₹350000</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                </div>
-
-              </div>
-            </div><!-- End Recent Sales -->
-
-            <!-- Top Selling -->
-            <div class="col-12">
-              <div class="card top-selling overflow-auto">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body pb-0">
-                  <h5 class="card-title">Top Selling <span>| Today</span></h5>
-
-                  <table class="table table-borderless">
-                    <thead>
-                      <tr>
-                        <th scope="col">Preview</th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Sold</th>
-                        <th scope="col">Revenue</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="img/gallery-1.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Solar - Package SPI-SM-101</a></td>
-                        <td>₹4500</td>
-                        <td class="fw-bold">30</td>
-                        <td>₹135000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="img/gallery-1.jpg" alt=""></a></th>
-                        <td>Solar - Package SPI-SM-102<</td>
-                        <td>₹7000</td>
-                        <td class="fw-bold">12</td>
-                        <td>₹84000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="img/gallery-1.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Solar - Package SPI-MD-202</a></td>
-                        <td>₹20000</td>
-                        <td class="fw-bold">4</td>
-                        <td>₹80000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="img/gallery-1.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Biogas - Package BGI-SM-102</a></td>
-                        <td>₹12000</td>
-                        <td class="fw-bold">4</td>
-                        <td>₹48000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="img/gallery-1.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Solar Batteries - Package SB-LG201</a></td>
-                        <td>₹10000</td>
-                        <td class="fw-bold">2</td>
-                        <td>₹20000</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                </div>
-
-              </div>
-            </div><!-- End Top Selling -->
-
-          </div>
-        </div><!-- End Left side columns -->
-
-        <!-- Right side columns -->
-        <div class="col-lg-4">
-
-        
-
-         
-
-          <!-- Website Traffic -->
-          <div class="card">
-            <div class="filter">
-              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <li class="dropdown-header text-start">
-                  <h6>Filter</h6>
-                </li>
-
-                <li><a class="dropdown-item" href="#">Today</a></li>
-                <li><a class="dropdown-item" href="#">This Month</a></li>
-                <li><a class="dropdown-item" href="#">This Year</a></li>
-              </ul>
-            </div>
-
-            <div class="card-body pb-0">
-              <h5 class="card-title">Website Traffic <span>| Today</span></h5>
-
-              <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
-
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  echarts.init(document.querySelector("#trafficChart")).setOption({
-                    tooltip: {
-                      trigger: 'item'
-                    },
-                    legend: {
-                      top: '5%',
-                      left: 'center'
-                    },
-                    series: [{
-                      name: 'Access From',
-                      type: 'pie',
-                      radius: ['40%', '70%'],
-                      avoidLabelOverlap: false,
-                      label: {
-                        show: false,
-                        position: 'center'
-                      },
-                      emphasis: {
-                        label: {
-                          show: true,
-                          fontSize: '18',
-                          fontWeight: 'bold'
-                        }
-                      },
-                      labelLine: {
-                        show: false
-                      },
-                      data: [{
-                          value: 1048,
-                          name: 'Search Engine'
-                        },
-                        {
-                          value: 735,
-                          name: 'Direct'
-                        },
-                        {
-                          value: 580,
-                          name: 'Email'
-                        },
-                        {
-                          value: 484,
-                          name: 'Union Ads'
-                        },
-                        {
-                          value: 300,
-                          name: 'Video Ads'
-                        }
-                      ]
-                    }]
-                  });
-                });
-              </script>
-
-            </div>
-          </div><!-- End Website Traffic -->
-
-         
-
-        </div><!-- End Right side columns -->
-
-      </div>
-    </section>
-
-  </main><!-- End #main -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="#">
+  <meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+  <meta name="author" content="#">
+  
+  <link rel="icon" href="../files/assets/images/favicon.ico" type="image/x-icon">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="../files/assets/icon/feather/css/feather.css">
+  
+ 
+  <link rel="stylesheet" type="text/css" href="../files/assets/css/jquery.mCustomScrollbar.css">
+  <link href="css/appadmin.css" rel="stylesheet">
+  <style type="text/css">/* Chart.js */
+  /*
+   * DOM element rendering detection
+   * https://davidwalsh.name/detect-node-insertion
+   */
+  @keyframes chartjs-render-animation {
+    from { opacity: 0.99; }
+    to { opacity: 1; }
+  }
+  
+  .chartjs-render-monitor {
+    animation: chartjs-render-animation 0.001s;
+  }
+  
+  /*
+   * DOM element resizing detection
+   * https://github.com/marcj/css-element-queries
+   */
+  .chartjs-size-monitor,
+  .chartjs-size-monitor-expand,
+  .chartjs-size-monitor-shrink {
+    position: absolute;
+    direction: ltr;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1;
+  }
+  
+  .chartjs-size-monitor-expand > div {
+    position: absolute;
+    width: 1000000px;
+    height: 1000000px;
+    left: 0;
+    top: 0;
+  }
+  
+  .chartjs-size-monitor-shrink > div {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+  }
+  </style></head>
+  <body themebg-pattern="pattern4">
+  
+  
+  
+  <div id="pcoded" class="pcoded iscollapsed" nav-type="st6" theme-layout="vertical" vertical-placement="left" vertical-layout="wide" pcoded-device-type="desktop" vertical-nav-type="expanded" vertical-effect="shrink" vnavigation-view="view1" fream-type="theme1" sidebar-img="false" sidebar-img-type="img1" layout-type="light">
+  <div class="pcoded-overlay-box"></div>
+  <div class="pcoded-container navbar-wrapper">
+  <nav class="navbar header-navbar pcoded-header iscollapsed" header-theme="theme1" pcoded-header-position="fixed">
+  <div class="navbar-wrapper">
+  <div class="navbar-logo" logo-theme="theme1">
+  <a class="mobile-menu" id="mobile-collapse" href="#!">
+  <i class="feather icon-menu icon-toggle-right"></i>
+  </a>
+  <a href="../index.html">
+  <img class="img-fluid" src="../files/assets/images/logo.png" alt="Theme-Logo">
+  </a>
+  <a class="mobile-options">
+  <i class="feather icon-more-horizontal"></i>
+  </a>
+  </div>
+  <div class="navbar-container">
+  <ul class="nav-left">
+  <li class="header-search">
+  <div class="main-search morphsearch-search">
+  <div class="input-group">
+  <span class="input-group-addon search-close"><i class="feather icon-x"></i></span>
+  <input type="text" class="form-control">
+  <span class="input-group-addon search-btn"><i class="feather icon-search"></i></span>
+  </div>
+  </div>
+  </li>
+  <li>
+  <a href="#!" onclick="javascript:toggleFullScreen()">
+  <i class="feather icon-maximize full-screen"></i>
+  </a>
+  </li>
+  </ul>
+  <ul class="nav-right">
+  <li class="header-notification">
+  <div class="dropdown-primary dropdown">
+  <div class="dropdown-toggle" data-toggle="dropdown">
+  <i class="feather icon-bell"></i>
+  <span class="badge bg-c-pink">5</span>
+  </div>
+  <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+  <li>
+  <h6>Notifications</h6>
+  <label class="label label-danger">New</label>
+  </li>
+  <li>
+  <div class="media">
+  <img class="d-flex align-self-center img-radius" src="../files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+  <div class="media-body">
+  <h5 class="notification-user">John Doe</h5>
+  <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
+  elit.</p>
+  <span class="notification-time">30 minutes ago</span>
+  </div>
+  </div>
+  </li>
+  <li>
+  <div class="media">
+  <img class="d-flex align-self-center img-radius" src="../files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+  <div class="media-body">
+  <h5 class="notification-user">Joseph William</h5>
+  <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
+  elit.</p>
+  <span class="notification-time">30 minutes ago</span>
+  </div>
+  </div>
+  </li>
+  <li>
+  <div class="media">
+  <img class="d-flex align-self-center img-radius" src="../files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+  <div class="media-body">
+  <h5 class="notification-user">Sara Soudein</h5>
+  <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
+  elit.</p>
+  <span class="notification-time">30 minutes ago</span>
+  </div>
+  </div>
+  </li>
+  </ul>
+  </div>
+  </li>
+  <li class="header-notification">
+  <div class="dropdown-primary dropdown">
+  <div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+  <i class="feather icon-message-square"></i>
+  <span class="badge bg-c-green">3</span>
+  </div>
+  </div>
+  </li>
+  <li class="user-profile header-notification">
+  <div class="dropdown-primary dropdown">
+  <div class="dropdown-toggle" data-toggle="dropdown">
+  <img src="../files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+  <span>John Doe</span>
+  <i class="feather icon-chevron-down"></i>
+  </div>
+  <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+  <li>
+  <a href="#!">
+  <i class="feather icon-settings"></i> Settings
+  </a>
+  </li>
+  <li>
+  <a href="user-profile.html">
+  <i class="feather icon-user"></i> Profile
+  </a>
+  </li>
+  <li>
+  <a href="email-inbox.html">
+  <i class="feather icon-mail"></i> My Messages
+  </a>
+  </li>
+  <li>
+  <a href="auth-lock-screen.html">
+  <i class="feather icon-lock"></i> Lock Screen
+  </a>
+  </li>
+  <li>
+  <a href="auth-normal-sign-in.html">
+  <i class="feather icon-log-out"></i> Logout
+  </a>
+  </li>
+  </ul>
+  </div>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </nav>
+  
+  <div id="sidebar" class="users p-chat-user showChat">
+  <div class="had-container">
+  <div class="card card_main p-fixed users-main">
+  <div class="user-box">
+  <div class="chat-inner-header">
+  <div class="back_chatBox">
+  <div class="right-icon-control">
+  <input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+  <div class="form-icon">
+  <i class="icofont icofont-search"></i>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 545px;"><div class="main-friend-list" style="overflow: hidden; width: auto; height: 545px;">
+  <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="" data-original-title="Josephin Doe">
+  <a class="media-left" href="#!">
+  <img class="media-object img-radius img-radius" src="../files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">
+  <div class="live-status bg-success"></div>
+  </a>
+  <div class="media-body">
+  <div class="f-13 chat-header">Josephin Doe</div>
+  </div>
+  </div>
+  <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="" data-original-title="Lary Doe">
+  <a class="media-left" href="#!">
+  <img class="media-object img-radius" src="../files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+  <div class="live-status bg-success"></div>
+  </a>
+  <div class="media-body">
+  <div class="f-13 chat-header">Lary Doe</div>
+  </div>
+  </div>
+  <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="" data-original-title="Alice">
+  <a class="media-left" href="#!">
+  <img class="media-object img-radius" src="../files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+  <div class="live-status bg-success"></div>
+  </a>
+  <div class="media-body">
+  <div class="f-13 chat-header">Alice</div>
+  </div>
+  </div>
+  <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="" data-original-title="Alia">
+  <a class="media-left" href="#!">
+  <img class="media-object img-radius" src="../files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+  <div class="live-status bg-success"></div>
+  </a>
+  <div class="media-body">
+  <div class="f-13 chat-header">Alia</div>
+  </div>
+  </div>
+  <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="" data-original-title="Suzen">
+  <a class="media-left" href="#!">
+  <img class="media-object img-radius" src="../files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+  <div class="live-status bg-success"></div>
+  </a>
+  <div class="media-body">
+  <div class="f-13 chat-header">Suzen</div>
+  </div>
+  </div>
+  </div><div class="slimScrollBar" style="background: rgb(27, 139, 249); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="showChat_inner">
+  <div class="media chat-inner-header">
+  <a class="back_chatBox">
+  <i class="feather icon-chevron-left"></i> Josephin Doe
+  </a>
+  </div>
+  <div class="media chat-messages">
+  <a class="media-left photo-table" href="#!">
+  <img class="media-object img-radius img-radius m-t-5" src="../files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+  </a>
+  <div class="media-body chat-menu-content">
+  <div class="">
+  <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+  <p class="chat-time">8:20 a.m.</p>
+  </div>
+  </div>
+  </div>
+  <div class="media chat-messages">
+  <div class="media-body chat-menu-reply">
+  <div class="">
+  <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+  <p class="chat-time">8:20 a.m.</p>
+  </div>
+  </div>
+  <div class="media-right photo-table">
+  <a href="#!">
+  <img class="media-object img-radius img-radius m-t-5" src="../files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+  </a>
+  </div>
+  </div>
+  <div class="chat-reply-box p-b-20">
+  <div class="right-icon-control">
+  <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+  <div class="form-icon">
+  <i class="feather icon-navigation"></i>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="pcoded-main-container" style="margin-top: 56px;">
+  <div class="pcoded-wrapper">
+  <nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme1" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
+  <div class="pcoded-inner-navbar main-menu mCustomScrollbar _mCS_1" id="" style="height: calc(100% - 80px);"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical_horizontal mCSB_inside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container_wrapper" class="mCSB_container_wrapper mCS_x_hidden mCS_no_scrollbar_x"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: -10px; left: 0px; width: 100%;" dir="ltr">
+  <div class="pcoded-navigatio-lavel" menu-title-theme="theme5">Navigation</div>
+  <ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="none" subitem-border="true">
+  <li class="pcoded-hasmenu active pcoded-trigger" dropdown-icon="style1" subitem-icon="style1">
+  <a href="javascript:void(0)">
+  <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+  <span class="pcoded-mtext">Dashboard</span>
+  </a>
+  <ul class="pcoded-submenu">
+  
+  
+  
+  </ul>
+  </li>
+  <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+ 
+  <ul class="pcoded-submenu">
+  <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+  <a href="javascript:void(0)">
+  <span class="pcoded-mtext">Vertical</span>
+  </a>
+ 
+  </li>
+  
+  
   
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  </ul>
+  </li>
+ 
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.min.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  </ul>
+  
+ 
+  
+ 
+  
+  </div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 19px; max-height: 219px; top: 1px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div><div id="mCSB_1_scrollbar_horizontal" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_horizontal" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 30px; width: 0px; left: 0px;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+  </nav>
+  <div class="pcoded-content">
+  <div class="pcoded-inner-content">
+  <div class="main-body">
+  <div class="page-wrapper">
+  <div class="page-body">
+  <div class="row">
+  
+  <div class="col-xl-3 col-md-6">
+  <div class="card">
+  <div class="card-block">
+  <div class="row align-items-center">
+  <div class="col-8">
+  <h4 class="text-c-yellow f-w-600">$30200</h4>
+  <h6 class="text-muted m-b-0">All Earnings</h6>
+  </div>
+  <div class="col-4 text-right">
+  <i class="feather icon-bar-chart f-28"></i>
+  </div>
+  </div>
+  </div>
+  <div class="card-footer bg-c-yellow">
+  <div class="row align-items-center">
+  <div class="col-9">
+  <p class="text-white m-b-0">% change</p>
+  </div>
+  <div class="col-3 text-right">
+  <i class="feather icon-trending-up text-white f-16"></i>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+  <div class="card">
+  <div class="card-block">
+  <div class="row align-items-center">
+   <div class="col-8">
+  <h4 class="text-c-green f-w-600">290+</h4>
+  <h6 class="text-muted m-b-0">Page Views</h6>
+  </div>
+  <div class="col-4 text-right">
+  <i class="feather icon-file-text f-28"></i>
+  </div>
+  </div>
+  </div>
+  <div class="card-footer bg-c-green">
+  <div class="row align-items-center">
+  <div class="col-9">
+  <p class="text-white m-b-0">% change</p>
+  </div>
+  <div class="col-3 text-right">
+  <i class="feather icon-trending-up text-white f-16"></i>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+  <div class="card">
+  <div class="card-block">
+  <div class="row align-items-center">
+  <div class="col-8">
+  <h4 class="text-c-pink f-w-600">145</h4>
+  <h6 class="text-muted m-b-0">Task Completed</h6>
+  </div>
+  <div class="col-4 text-right">
+  <i class="feather icon-calendar f-28"></i>
+  </div>
+  </div>
+  </div>
+  <div class="card-footer bg-c-pink">
+  <div class="row align-items-center">
+  <div class="col-9">
+  <p class="text-white m-b-0">% change</p>
+  </div>
+  <div class="col-3 text-right">
+  <i class="feather icon-trending-up text-white f-16"></i>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+  <div class="card">
+  <div class="card-block">
+  <div class="row align-items-center">
+  <div class="col-8">
+   <h4 class="text-c-blue f-w-600">500</h4>
+  <h6 class="text-muted m-b-0">Downloads</h6>
+  </div>
+  <div class="col-4 text-right">
+  <i class="feather icon-download f-28"></i>
+  </div>
+  </div>
+  </div>
+  <div class="card-footer bg-c-blue">
+  <div class="row align-items-center">
+  <div class="col-9">
+  <p class="text-white m-b-0">% change</p>
+  </div>
+  <div class="col-3 text-right">
+  <i class="feather icon-trending-up text-white f-16"></i>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="col-xl-8 col-md-12">
+  <div class="card">
+  <div class="card-header">
+  <h5>Visitors</h5>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <div class="card-header-right">
+  <ul class="list-unstyled card-option">
+  <li><i class="feather icon-maximize full-card"></i></li>
+  <li><i class="feather icon-minus minimize-card"></i>
+  </li>
+  <li><i class="feather icon-trash-2 close-card"></i></li>
+  </ul>
+  </div>
+  </div>
+  <div class="card-block">
+  <div id="visitor" style="height: 300px; overflow: hidden; text-align: left;"><div class="amcharts-main-div" style="position: relative; width: 100%; height: 100%;"><div class="amChartsLegend amcharts-legend-div" style="overflow: hidden; position: relative; text-align: left; width: 638px; height: 76px;"><svg version="1.1" style="position: absolute; width: 638px; height: 76px;"><desc>JavaScript chart by amCharts 3.21.5</desc><g transform="translate(81,10)"><path cs="100,100" d="M0.5,0.5 L488.5,0.5 L488.5,65.5 L0.5,65.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0"></path><g transform="translate(0,11)"><g cursor="pointer" aria-label="old Visitor" transform="translate(0,0)"><path cs="100,100" d="M-15.5,8.5 L16.5,8.5 L16.5,-7.5 L-15.5,-7.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9" transform="translate(16,8)"></path><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(37,7)"><tspan y="6" x="0">old Visitor</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(193,7)"> </text><rect x="32" y="0" width="161.03076171875" height="18" rx="0" ry="0" stroke-width="0" stroke="none" fill="#fff" fill-opacity="0.005"></rect></g><g cursor="pointer" aria-label="New visitor" transform="translate(208,0)"><path cs="100,100" d="M-15.5,8.5 L16.5,8.5 L16.5,-7.5 L-15.5,-7.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9" transform="translate(16,8)"></path><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(37,7)"><tspan y="6" x="0">New visitor</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(193,7)"> </text><rect x="32" y="0" width="161.03076171875" height="18" rx="0" ry="0" stroke-width="0" stroke="none" fill="#fff" fill-opacity="0.005"></rect></g><g cursor="pointer" aria-label="Last Month Visitor" transform="translate(0,28)"><g><path cs="100,100" d="M0.5,8.5 L32.5,8.5" fill="none" stroke-width="2" stroke-opacity="0.9" stroke="#0df3a3"></path><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(17,8)"></circle></g><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(37,7)"><tspan y="6" x="0">Last Month Visitor</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(193,7)"> </text><rect x="32" y="0" width="161.03076171875" height="18" rx="0" ry="0" stroke-width="0" stroke="none" fill="#fff" fill-opacity="0.005"></rect></g><g cursor="pointer" aria-label="Average Visitor" transform="translate(208,28)"><g><path cs="100,100" d="M0.5,8.5 L32.5,8.5" fill="none" stroke-width="2" stroke-dasharray="5" stroke-opacity="0.9" stroke="#fe5d70"></path><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(17,8)"></circle></g><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(37,7)"><tspan y="6" x="0">Average Visitor</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(193,7)"> </text><rect x="32" y="0" width="161.03076171875" height="18" rx="0" ry="0" stroke-width="0" stroke="none" fill="#fff" fill-opacity="0.005"></rect></g></g></g></svg></div><div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 638px; height: 224px; padding: 0px; touch-action: auto;"><svg version="1.1" style="position: absolute; width: 638px; height: 224px; top: -0.109375px; left: -0.203125px;"><desc>JavaScript chart by amCharts 3.21.5</desc><g><path cs="100,100" d="M0.5,0.5 L637.5,0.5 L637.5,223.5 L0.5,223.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0"></path><path cs="100,100" d="M0.5,0.5 L488.5,0.5 L488.5,173.5 L0.5,173.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" transform="translate(81,20)"></path></g><g><g transform="translate(81,20)"><g><path cs="100,100" d="M0.5,0.5 L0.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,173)"></path><path cs="100,100" d="M0.5,173.5 L0.5,173.5 L0.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M33.5,173.5 L33.5,173.5 L33.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M65.5,173.5 L65.5,173.5 L65.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M98.5,0.5 L98.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,173)"></path><path cs="100,100" d="M98.5,173.5 L98.5,173.5 L98.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M130.5,173.5 L130.5,173.5 L130.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M163.5,173.5 L163.5,173.5 L163.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M195.5,0.5 L195.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,173)"></path><path cs="100,100" d="M195.5,173.5 L195.5,173.5 L195.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M228.5,173.5 L228.5,173.5 L228.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M260.5,173.5 L260.5,173.5 L260.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M293.5,0.5 L293.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,173)"></path><path cs="100,100" d="M293.5,173.5 L293.5,173.5 L293.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M325.5,173.5 L325.5,173.5 L325.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M358.5,173.5 L358.5,173.5 L358.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M390.5,0.5 L390.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,173)"></path><path cs="100,100" d="M390.5,173.5 L390.5,173.5 L390.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M423.5,173.5 L423.5,173.5 L423.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M455.5,173.5 L455.5,173.5 L455.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.07" stroke="#000000"></path></g><g><path cs="100,100" d="M488.5,0.5 L488.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(0,173)"></path><path cs="100,100" d="M488.5,173.5 L488.5,173.5 L488.5,0.5" fill="none" stroke-width="1" stroke-dasharray="1" stroke-opacity="0.1" stroke="#000000"></path></g></g><g transform="translate(81,20)" visibility="visible"><g><path cs="100,100" d="M0.5,173.5 L6.5,173.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,173.5 L0.5,173.5 L488.5,173.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,138.5 L6.5,138.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,138.5 L0.5,138.5 L488.5,138.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,104.5 L6.5,104.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,104.5 L0.5,104.5 L488.5,104.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,69.5 L6.5,69.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,69.5 L0.5,69.5 L488.5,69.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,35.5 L6.5,35.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,35.5 L0.5,35.5 L488.5,35.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,0.5 L6.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L488.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g></g><g transform="translate(81,20)" visibility="visible"><g><path cs="100,100" d="M0.5,173.5 L6.5,173.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(488,0)"></path></g><g><path cs="100,100" d="M0.5,138.5 L6.5,138.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(488,0)"></path></g><g><path cs="100,100" d="M0.5,104.5 L6.5,104.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(488,0)"></path></g><g><path cs="100,100" d="M0.5,69.5 L6.5,69.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(488,0)"></path></g><g><path cs="100,100" d="M0.5,35.5 L6.5,35.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(488,0)"></path></g><g><path cs="100,100" d="M0.5,0.5 L6.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(488,0)"></path></g></g></g><g transform="translate(81,20)" clip-path="url(#AmChartsEl-3)"><g visibility="hidden"></g></g><g></g><g></g><g></g><g><g transform="translate(81,20)"><g><g transform="translate(8,173)" aria-label="old Visitor Jan 16, 2013 8.00"><path cs="100,100" d="M0.5,0.5 L0.5,-137.5 L16.5,-137.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(41,173)" aria-label="old Visitor Jan 17, 2013 6.00"><path cs="100,100" d="M0.5,0.5 L0.5,-103.5 L16.5,-103.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(73,173)" aria-label="old Visitor Jan 18, 2013 2.00"><path cs="100,100" d="M0.5,0.5 L0.5,-34.5 L16.5,-34.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(106,173)" aria-label="old Visitor Jan 19, 2013 9.00"><path cs="100,100" d="M0.5,0.5 L0.5,-155.5 L16.5,-155.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(138,173)" aria-label="old Visitor Jan 20, 2013 6.00"><path cs="100,100" d="M0.5,0.5 L0.5,-103.5 L16.5,-103.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(171,173)" aria-label="old Visitor Jan 21, 2013 5.00"><path cs="100,100" d="M0.5,0.5 L0.5,-85.5 L16.5,-85.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(203,173)" aria-label="old Visitor Jan 22, 2013 7.00"><path cs="100,100" d="M0.5,0.5 L0.5,-120.5 L16.5,-120.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(236,173)" aria-label="old Visitor Jan 23, 2013 6.00"><path cs="100,100" d="M0.5,0.5 L0.5,-103.5 L16.5,-103.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(269,173)" aria-label="old Visitor Jan 24, 2013 5.00"><path cs="100,100" d="M0.5,0.5 L0.5,-85.5 L16.5,-85.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(301,173)" aria-label="old Visitor Jan 25, 2013 8.00"><path cs="100,100" d="M0.5,0.5 L0.5,-137.5 L16.5,-137.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(334,173)" aria-label="old Visitor Jan 26, 2013 8.00"><path cs="100,100" d="M0.5,0.5 L0.5,-137.5 L16.5,-137.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(366,173)" aria-label="old Visitor Jan 27, 2013 4.00"><path cs="100,100" d="M0.5,0.5 L0.5,-68.5 L16.5,-68.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(399,173)" aria-label="old Visitor Jan 28, 2013 7.00"><path cs="100,100" d="M0.5,0.5 L0.5,-120.5 L16.5,-120.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(431,173)" aria-label="old Visitor Jan 29, 2013 8.00"><path cs="100,100" d="M0.5,0.5 L0.5,-137.5 L16.5,-137.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(464,173)" aria-label="old Visitor Jan 30, 2013 7.00"><path cs="100,100" d="M0.5,0.5 L0.5,-120.5 L16.5,-120.5 L16.5,0.5 L0.5,0.5 Z" fill="#feb798" stroke="#feb798" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g></g></g><g transform="translate(81,20)"><g><g transform="translate(11,173)" aria-label="New visitor Jan 16, 2013 5.00"><path cs="100,100" d="M0.5,0.5 L0.5,-85.5 L10.5,-85.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(44,173)" aria-label="New visitor Jan 17, 2013 4.00"><path cs="100,100" d="M0.5,0.5 L0.5,-68.5 L10.5,-68.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(76,173)" aria-label="New visitor Jan 18, 2013 5.00"><path cs="100,100" d="M0.5,0.5 L0.5,-85.5 L10.5,-85.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(109,173)" aria-label="New visitor Jan 19, 2013 8.00"><path cs="100,100" d="M0.5,0.5 L0.5,-137.5 L10.5,-137.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(141,173)" aria-label="New visitor Jan 20, 2013 9.00"><path cs="100,100" d="M0.5,0.5 L0.5,-155.5 L10.5,-155.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(174,173)" aria-label="New visitor Jan 21, 2013 3.00"><path cs="100,100" d="M0.5,0.5 L0.5,-51.5 L10.5,-51.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(206,173)" aria-label="New visitor Jan 22, 2013 5.00"><path cs="100,100" d="M0.5,0.5 L0.5,-85.5 L10.5,-85.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(239,173)" aria-label="New visitor Jan 23, 2013 7.00"><path cs="100,100" d="M0.5,0.5 L0.5,-120.5 L10.5,-120.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(272,173)" aria-label="New visitor Jan 24, 2013 9.00"><path cs="100,100" d="M0.5,0.5 L0.5,-155.5 L10.5,-155.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(304,173)" aria-label="New visitor Jan 25, 2013 5.00"><path cs="100,100" d="M0.5,0.5 L0.5,-85.5 L10.5,-85.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(337,173)" aria-label="New visitor Jan 26, 2013 4.00"><path cs="100,100" d="M0.5,0.5 L0.5,-68.5 L10.5,-68.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(369,173)" aria-label="New visitor Jan 27, 2013 3.00"><path cs="100,100" d="M0.5,0.5 L0.5,-51.5 L10.5,-51.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(402,173)" aria-label="New visitor Jan 28, 2013 5.00"><path cs="100,100" d="M0.5,0.5 L0.5,-85.5 L10.5,-85.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(434,173)" aria-label="New visitor Jan 29, 2013 5.00"><path cs="100,100" d="M0.5,0.5 L0.5,-85.5 L10.5,-85.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g><g transform="translate(467,173)" aria-label="New visitor Jan 30, 2013 4.00"><path cs="100,100" d="M0.5,0.5 L0.5,-68.5 L10.5,-68.5 L10.5,0.5 L0.5,0.5 Z" fill="#fe9365" stroke="#fe9365" fill-opacity="1" stroke-width="1" stroke-opacity="0.9"></path></g></g></g><g transform="translate(81,20)"><g></g><g clip-path="url(#AmChartsEl-5)"><path cs="100,100" d="M16,166 C24,165,33,148,49,145 C65,143,65,121,81,118 C97,114,98,71,114,69 C130,68,130,89,146,90 C162,91,163,85,179,83 C195,81,195,49,211,48 C227,48,228,68,244,69 C261,70,261,67,277,69 C293,71,293,104,309,104 C325,103,326,57,342,55 C358,54,358,75,374,76 C390,78,391,83,407,83 C423,83,423,75,439,76 C455,77,464,96,472,97 M0,0 L0,0" fill="none" fill-opacity="0" stroke-width="2" stroke-opacity="0.9" stroke="#0df3a3"></path></g><clipPath id="AmChartsEl-5"><rect x="0" y="0" width="488" height="173" rx="0" ry="0" stroke-width="0"></rect></clipPath><g></g></g><g transform="translate(81,20)"><g></g><g clip-path="url(#AmChartsEl-6)"><path cs="100,100" d="M16.5,138.9 L49.5,118.14 L81.5,48.94 L114.5,42.02 L146.5,42.02 L179.5,69.7 L211.5,21.26 L244.5,35.1 L277.5,28.18 L309.5,76.62 L342.5,21.26 L374.5,55.86 L407.5,48.94 L439.5,55.86 L472.5,69.7 M0,0 L0,0" fill="none" stroke-width="2" stroke-dasharray="5" stroke-opacity="0.9" stroke="#fe5d70" stroke-linejoin="round"></path></g><clipPath id="AmChartsEl-6"><rect x="0" y="0" width="488" height="173" rx="0" ry="0" stroke-width="0"></rect></clipPath><g></g></g></g><g></g><g><path cs="100,100" d="M0.5,173.5 L488.5,173.5 L488.5,173.5" fill="none" stroke-width="1" stroke-opacity="0.2" stroke="#000000" transform="translate(81,20)"></path><g><path cs="100,100" d="M0.5,0.5 L488.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(81,193)"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,173.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(81,20)" visibility="visible"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,173.5 L0.5,173.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(569,20)" visibility="visible"></path></g></g><g><g transform="translate(81,20)" clip-path="url(#AmChartsEl-4)" style="pointer-events: none;"><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L0.5,173.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" visibility="hidden"></path><path cs="100,100" d="M0.5,0.5 L488.5,0.5 L488.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.2" stroke="#000000" visibility="hidden"></path></g><clipPath id="AmChartsEl-4"><rect x="0" y="0" width="488" height="173" rx="0" ry="0" stroke-width="0"></rect></clipPath></g><g></g><g><g transform="translate(81,20)"></g><g transform="translate(81,20)"></g><g transform="translate(81,20)"><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(16,166)" aria-label="Last Month Visitor Jan 16, 2013 71.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(49,145)" aria-label="Last Month Visitor Jan 17, 2013 74.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(81,118)" aria-label="Last Month Visitor Jan 18, 2013 78.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(114,69)" aria-label="Last Month Visitor Jan 19, 2013 85.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(146,90)" aria-label="Last Month Visitor Jan 20, 2013 82.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(179,83)" aria-label="Last Month Visitor Jan 21, 2013 83.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(211,48)" aria-label="Last Month Visitor Jan 22, 2013 88.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(244,69)" aria-label="Last Month Visitor Jan 23, 2013 85.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(277,69)" aria-label="Last Month Visitor Jan 24, 2013 85.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(309,104)" aria-label="Last Month Visitor Jan 25, 2013 80.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(342,55)" aria-label="Last Month Visitor Jan 26, 2013 87.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(374,76)" aria-label="Last Month Visitor Jan 27, 2013 84.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(407,83)" aria-label="Last Month Visitor Jan 28, 2013 83.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(439,76)" aria-label="Last Month Visitor Jan 29, 2013 84.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#0df3a3" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(472,97)" aria-label="Last Month Visitor Jan 30, 2013 81.00"></circle></g><g transform="translate(81,20)"><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(16,138)" aria-label="Average Visitor Jan 16, 2013 75.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(49,118)" aria-label="Average Visitor Jan 17, 2013 78.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(81,48)" aria-label="Average Visitor Jan 18, 2013 88.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(114,42)" aria-label="Average Visitor Jan 19, 2013 89.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(146,42)" aria-label="Average Visitor Jan 20, 2013 89.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(179,69)" aria-label="Average Visitor Jan 21, 2013 85.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(211,21)" aria-label="Average Visitor Jan 22, 2013 92.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(244,35)" aria-label="Average Visitor Jan 23, 2013 90.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(277,28)" aria-label="Average Visitor Jan 24, 2013 91.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(309,76)" aria-label="Average Visitor Jan 25, 2013 84.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(342,21)" aria-label="Average Visitor Jan 26, 2013 92.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(374,55)" aria-label="Average Visitor Jan 27, 2013 87.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(407,48)" aria-label="Average Visitor Jan 28, 2013 88.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(439,55)" aria-label="Average Visitor Jan 29, 2013 87.00"></circle><circle r="2.5" cx="0" cy="0" fill="#FFFFFF" stroke="#fe5d70" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(472,69)" aria-label="Average Visitor Jan 30, 2013 85.00"></circle></g></g><g><g></g></g><g><g transform="translate(81,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(3,185.5)"><tspan y="6" x="0">Jan 16</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(101,185.5)"><tspan y="6" x="0">Jan 19</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(198,185.5)"><tspan y="6" x="0">Jan 22</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(296,185.5)"><tspan y="6" x="0">Jan 25</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(393,185.5)"><tspan y="6" x="0">Jan 28</tspan></text></g><g transform="translate(81,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,172)"><tspan y="6" x="0">$0M</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,137)"><tspan y="6" x="0">$2M</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,103)"><tspan y="6" x="0">$4M</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,68)"><tspan y="6" x="0">$6M</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,34)"><tspan y="6" x="0">$8M</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,-1)"><tspan y="6" x="0">$10M</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="12px" opacity="1" font-weight="bold" text-anchor="middle" transform="translate(-60,87) rotate(-90)"><tspan y="6" x="0">Visitors</tspan></text></g><g transform="translate(81,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(498,172)"><tspan y="6" x="0">70</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(498,137)"><tspan y="6" x="0">75</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(498,103)"><tspan y="6" x="0">80</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(498,68)"><tspan y="6" x="0">85</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(498,34)"><tspan y="6" x="0">90</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" transform="translate(498,-1)"><tspan y="6" x="0">95</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="12px" opacity="1" font-weight="bold" text-anchor="middle" transform="translate(530,87) rotate(-90)"><tspan y="6" x="0">New Visitors</tspan></text></g></g><g></g><g transform="translate(81,20)"></g><g></g><g></g><clipPath id="AmChartsEl-3"><rect x="-1" y="-1" width="490" height="175" rx="0" ry="0" stroke-width="0"></rect></clipPath></svg></div></div></div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-4 col-md-12">
+  <div class="card">
+  <div class="card-block bg-c-green">
+  <div id="proj-earning" style="height: 230px; overflow: hidden; text-align: left;"><div class="amcharts-main-div" style="position: relative;"><div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 284px; height: 230px; padding: 0px; touch-action: auto; cursor: default;"><svg version="1.1" style="position: absolute; width: 284px; height: 230px; top: 0.390625px; left: 0.390625px;"><desc>JavaScript chart by amCharts 3.21.5</desc><g><path cs="100,100" d="M0.5,0.5 L283.5,0.5 L283.5,229.5 L0.5,229.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0"></path><path cs="100,100" d="M0.5,0.5 L222.5,0.5 L222.5,178.5 L0.5,178.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" transform="translate(41,20)"></path></g><g transform="translate(41,20)" clip-path="url(#AmChartsEl-9)"><g visibility="hidden"></g></g><g></g><g></g><g></g><g><g transform="translate(41,20)"><g><g transform="translate(11,178)" visibility="visible" aria-label=" UI 10"><path cs="100,100" d="M0.5,0.5 L0.5,-58.5 L22.5,-58.5 L22.5,0.5 L0.5,0.5 Z" fill="#fff" stroke="#fff" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(56,178)" visibility="visible" aria-label=" UX 15"><path cs="100,100" d="M0.5,0.5 L0.5,-132.5 L22.5,-132.5 L22.5,0.5 L0.5,0.5 Z" fill="#fff" stroke="#fff" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(100,178)" visibility="visible" aria-label=" Web 12"><path cs="100,100" d="M0.5,0.5 L0.5,-88.5 L22.5,-88.5 L22.5,0.5 L0.5,0.5 Z" fill="#fff" stroke="#fff" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(144,178)" visibility="visible" aria-label=" App 16"><path cs="100,100" d="M0.5,0.5 L0.5,-147.5 L22.5,-147.5 L22.5,0.5 L0.5,0.5 Z" fill="#fff" stroke="#fff" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(189,178)" visibility="visible" aria-label=" SEO 8"><path cs="100,100" d="M0.5,0.5 L0.5,-29.5 L22.5,-29.5 L22.5,0.5 L0.5,0.5 Z" fill="#fff" stroke="#fff" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g></g></g></g><g></g><g><g><path cs="100,100" d="M0.5,0.5 L222.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(41,198)"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,178.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="transparent" transform="translate(41,20)" visibility="visible"></path></g></g><g><g transform="translate(41,20)" clip-path="url(#AmChartsEl-10)" style="pointer-events: none;"><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L0.5,178.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" visibility="hidden" transform="translate(111,0)"></path><path cs="100,100" d="M0.5,0.5 L222.5,0.5 L222.5,0.5" fill="none" stroke-width="1" stroke="#000000" visibility="hidden" transform="translate(0,9)"></path></g><clipPath id="AmChartsEl-10"><rect x="0" y="0" width="222" height="178" rx="0" ry="0" stroke-width="0"></rect></clipPath></g><g></g><g><g></g></g><g><g transform="translate(41,20)" visibility="visible"><text y="6" fill="#fff" font-family="Verdana" font-size="12px" opacity="1" text-anchor="middle" transform="translate(22.2,191)"><tspan y="6" x="0">UI</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="12px" opacity="1" text-anchor="middle" transform="translate(67.2,191)"><tspan y="6" x="0">UX</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="12px" opacity="1" text-anchor="middle" transform="translate(111.2,191)"><tspan y="6" x="0">Web</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="12px" opacity="1" text-anchor="middle" transform="translate(155.2,191)"><tspan y="6" x="0">App</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="12px" opacity="1" text-anchor="middle" transform="translate(200.2,191)"><tspan y="6" x="0">SEO</tspan></text></g><g transform="translate(41,20)" visibility="visible"><text y="6" fill="#fff" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,177)"><tspan y="6" x="0">6</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,147)"><tspan y="6" x="0">8</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,118)"><tspan y="6" x="0">10</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,88)"><tspan y="6" x="0">12</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,58)"><tspan y="6" x="0">14</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,29)"><tspan y="6" x="0">16</tspan></text><text y="6" fill="#fff" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,-1)"><tspan y="6" x="0">18</tspan></text></g></g><g transform="translate(41,20)"></g><g></g><g></g><g><g transform="translate(41,20)"></g><g transform="translate(41,20)" visibility="visible"><g><path cs="100,100" d="M0.5,178.5 L6.5,178.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="transparent" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,178.5 L0.5,178.5 L222.5,178.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#fff"></path></g><g><path cs="100,100" d="M0.5,148.5 L6.5,148.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="transparent" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,148.5 L0.5,148.5 L222.5,148.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#fff"></path></g><g><path cs="100,100" d="M0.5,119.5 L6.5,119.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="transparent" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,119.5 L0.5,119.5 L222.5,119.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#fff"></path></g><g><path cs="100,100" d="M0.5,89.5 L6.5,89.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="transparent" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,89.5 L0.5,89.5 L222.5,89.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#fff"></path></g><g><path cs="100,100" d="M0.5,59.5 L6.5,59.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="transparent" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,59.5 L0.5,59.5 L222.5,59.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#fff"></path></g><g><path cs="100,100" d="M0.5,30.5 L6.5,30.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="transparent" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,30.5 L0.5,30.5 L222.5,30.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#fff"></path></g><g><path cs="100,100" d="M0.5,0.5 L6.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="transparent" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L222.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#fff"></path></g></g></g><g><g transform="translate(41,20)"></g></g><g></g><clipPath id="AmChartsEl-9"><rect x="-1" y="-1" width="224" height="180" rx="0" ry="0" stroke-width="0"></rect></clipPath></svg></div></div></div>
+  </div>
+  <div class="card-footer">
+   <h6 class="text-muted m-b-30 m-t-15">Total completed project and
+  earning</h6>
+  <div class="row text-center">
+  <div class="col-6 b-r-default">
+  <h6 class="text-muted m-b-10">Completed Projects</h6>
+  <h4 class="m-b-0 f-w-600 ">175</h4>
+  </div>
+  <div class="col-6">
+  <h6 class="text-muted m-b-10">Total Earnings</h6>
+  <h4 class="m-b-0 f-w-600 ">76.6M</h4>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="col-xl-5 col-md-12">
+  <div class="card table-card">
+  <div class="card-header">
+  <h5>Global Sales by Top Locations</h5>
+  </div>
+  <div class="card-block">
+  <div class="table-responsive">
+  <table class="table table-hover table-borderless">
+  <thead>
+  <tr>
+  <th>#</th>
+  <th>Country</th>
+  <th>Sales</th>
+  <th class="text-right">Average</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><img src="../files/assets/images/widget/GERMANY.jpg" alt="" class="img-fluid img-30"></td>
+  <td>Germany</td>
+  <td>3,562</td>
+  <td class="text-right">56.23%</td>
+  </tr>
+  <tr>
+  <td><img src="../files/assets/images/widget/USA.jpg" alt="" class="img-fluid img-30"></td>
+  <td>USA</td>
+  <td>2,650</td>
+  <td class="text-right">25.23%</td>
+   </tr>
+  <tr>
+  <td><img src="../files/assets/images/widget/AUSTRALIA.jpg" alt="" class="img-fluid img-30"></td>
+  <td>Australia</td>
+  <td>956</td>
+  <td class="text-right">12.45%</td>
+  </tr>
+  <tr>
+  <td><img src="../files/assets/images/widget/UK.jpg" alt="" class="img-fluid img-30"></td>
+  <td>United Kingdom</td>
+  <td>689</td>
+  <td class="text-right">8.65%</td>
+  </tr>
+  <tr>
+  <td><img src="../files/assets/images/widget/BRAZIL.jpg" alt="" class="img-fluid img-30"></td>
+  <td>Brazil</td>
+  <td>560</td>
+  <td class="text-right">3.56%</td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="text-right  m-r-20">
+  <a href="#!" class="b-b-primary text-primary">View all Sales
+  Locations </a>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-4 col-md-6">
+  <div class="card">
+  <div class="card-header">
+  <h5>New Users</h5>
+  </div>
+  <div class="card-block"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+  <canvas id="newuserchart" height="250" style="display: block; width: 284px; height: 250px;" width="284" class="chartjs-render-monitor"></canvas>
+  </div>
+  <div class="card-footer ">
+  <div class="row text-center b-t-default">
+  <div class="col-4 b-r-default m-t-15">
+  <h5>85%</h5>
+  <p class="text-muted m-b-0">Satisfied</p>
+  </div>
+  <div class="col-4 b-r-default m-t-15">
+   <h5>6%</h5>
+  <p class="text-muted m-b-0">Unsatisfied</p>
+  </div>
+  <div class="col-4 m-t-15">
+  <h5>9%</h5>
+  <p class="text-muted m-b-0">NA</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+  <div class="card">
+  <div class="card-block text-center">
+  <i class="feather icon-mail text-c-lite-green d-block f-40"></i>
+  <h4 class="m-t-15"><span class="text-c-lite-green">8.62k</span>
+  Subscribers</h4>
+  <p class="m-b-10">Your main list is growing</p>
+  <button class="btn btn-primary btn-sm btn-round">Manage
+  List</button>
+  </div>
+  </div>
+  <div class="card">
+  <div class="card-block text-center">
+  <i class="feather icon-twitter text-c-green d-block f-40"></i>
+  <h4 class="m-t-15"><span class="text-c-blgreenue">+40</span>
+  Followers</h4>
+  <p class="m-b-10">Your main list is growing</p>
+  <button class="btn btn-success btn-sm btn-round">Check them
+  out</button>
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="col-xl-4 col-md-6">
+  <div class="card o-hidden">
+  <div class="card-block bg-c-pink text-white"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+  <h6>Sales Per Day <span class="f-right"><i class="feather icon-activity m-r-15"></i>3%</span>
+  </h6>
+  <canvas id="sale-chart1" height="142" width="284" style="display: block; width: 284px; height: 142px;" class="chartjs-render-monitor"></canvas>
+  </div>
+  <div class="card-footer text-center">
+  <div class="row">
+  <div class="col-6 b-r-default">
+  <h4>$4230</h4>
+  <p class="text-muted m-b-0">Total Revenue</p>
+  </div>
+  <div class="col-6">
+  <h4>321</h4>
+  <p class="text-muted m-b-0">Today Sales</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-4 col-md-6">
+  <div class="card o-hidden">
+  <div class="card-block bg-c-green text-white"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+  <h6>Visits<span class="f-right"><i class="feather icon-activity m-r-15"></i>9%</span>
+  </h6>
+  <canvas id="sale-chart2" height="142" width="284" style="display: block; width: 284px; height: 142px;" class="chartjs-render-monitor"></canvas>
+  </div>
+  <div class="card-footer text-center">
+  <div class="row">
+  <div class="col-6 b-r-default">
+  <h4>3562</h4>
+  <p class="text-muted m-b-0">Monthly Visits</p>
+  </div>
+  <div class="col-6">
+  <h4>96</h4>
+  <p class="text-muted m-b-0">Today Visits</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-4 col-md-12">
+  <div class="card o-hidden">
+  <div class="card-block bg-c-blue text-white"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+  <h6>Orders<span class="f-right"><i class="feather icon-activity m-r-15"></i>12%</span>
+  </h6>
+  <canvas id="sale-chart3" height="142" width="284" style="display: block; width: 284px; height: 142px;" class="chartjs-render-monitor"></canvas>
+  </div>
+  <div class="card-footer text-center">
+  <div class="row">
+  <div class="col-6 b-r-default">
+  <h4>1695</h4>
+  <p class="text-muted m-b-0">Monthly Orders</p>
+  </div>
+  <div class="col-6">
+  <h4>52</h4>
+  <p class="text-muted m-b-0">Today Orders</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+   
+  
+  <div class="col-xl-4 col-md-12">
+  <div class="card quater-card">
+  <div class="card-block">
+  <h6 class="text-muted m-b-20">This Quarter</h6>
+  <h4>$3,9452.50</h4>
+  <p class="text-muted">$3,9452.50</p>
+  <h5 class="m-t-30">87</h5>
+  <p class="text-muted">Online Revenue<span class="f-right">80%</span></p>
+  <div class="progress">
+  <div class="progress-bar bg-simple-c-pink" style="width: 80%"></div>
+  </div>
+  <h5 class="m-t-30">68</h5>
+  <p class="text-muted">Offline Revenue<span class="f-right">50%</span></p>
+  <div class="progress">
+  <div class="progress-bar bg-simple-c-yellow" style="width: 50%"></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-8 col-md-12">
+  <div class="card social-network">
+  <div class="card-header">
+  <h5>Social Network</h5>
+  </div>
+  <div class="card-block">
+  <div class="row">
+  <div class="col-sm-6">
+  <img src="../files/assets/images/widget/icon-1.png " alt=" " class="img-responsive p-b-20">
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Views :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">545,721</p>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Comments :</p>
+  </div>
+  <div class="col-7">
+   <p class="m-b-5 f-w-400">2,256</p>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Likes :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">4,129</p>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Subscribe :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">3,451,945</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-sm-6">
+  <img src="../files/assets/images/widget/icon-2.png " alt=" " class="img-responsive p-b-20">
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Engagement :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">1,543</p>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Shares :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">846</p>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Likes :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">569</p>
+  </div>
+   </div>
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Comments :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">156</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-6 m-t-0">
+  <img src="../files/assets/images/widget/icon-3.png " alt=" " class="img-responsive p-b-10 p-t-10">
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Tweets :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">103,576</p>
+  </div>
+  </div>
+  </div>
+  <div class="col-sm-6 m-t-0">
+  <img src="../files/assets/images/widget/icon-4.png " alt=" " class="img-responsive p-b-10 p-t-10">
+  <div class="row">
+  <div class="col-5">
+  <p class="text-muted m-b-5">Tweets :</p>
+  </div>
+  <div class="col-7">
+  <p class="m-b-5 f-w-400">103,576</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  </div>
 
-</body>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+
+  
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <script type="text/javascript" src="../files/bower_components/popper.js/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+  
+  <script type="text/javascript" src="files/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+  
+  <script type="text/javascript" src="files/bower_components/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="files/bower_components/modernizr/css-scrollbars.js"></script>
+  
+  <script type="text/javascript" src="files/bower_components/chart.js/dist/Chart.js"></script>
+  
+  <script src="files/assets/pages/widget/amchart/amcharts.js"></script>
+  <script src="files/assets/pages/widget/amchart/serial.js"></script>
+  <script src="files/assets/pages/widget/amchart/light.js"></script>
+  
+  <script type="text/javascript" src="files/assets/js/SmoothScroll.js"></script>
+  <script src="files/assets/js/pcoded.min.js"></script>
+  <script src="files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="files/assets/js/vartical-layout.min.js"></script>
+  <script type="text/javascript" src="files/assets/pages/dashboard/analytic-dashboard.min.js"></script>
+  <script type="text/javascript" src="files/assets/js/script.js"></script>
+  
+  </body></html>
+<head>
+ 
+</head>
+ 
 
 </html>
