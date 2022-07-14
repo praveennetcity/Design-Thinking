@@ -1,0 +1,993 @@
+<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths cssscrollbar"><head><style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:focus>img:nth-child(1),.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1),.gm-control-active:disabled>img:nth-child(1){display:none}.gm-control-active:focus>img:nth-child(2),.gm-control-active:hover>img:nth-child(2){display:block}.gm-control-active:active>img:nth-child(3){display:block}.gm-control-active:disabled>img:nth-child(4){display:block}
+</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400&amp;lang=en"><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&amp;lang=en"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}.gm-ui-hover-effect>span{background-color:#000}@media (forced-colors:active),(prefers-contrast:more){.gm-ui-hover-effect>span{background-color:ButtonText}}
+</style><style>.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span{outline-offset:3px}
+</style><style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,.12);border:1px solid #d2e3fc;outline:0}.dismissButton:focus:not(:focus-visible){background-color:#fff;border:1px solid #dadce0;outline:none}.dismissButton:focus-visible{background-color:rgba(66,133,244,.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd}.dismissButton:hover:focus:not(:focus-visible){background-color:rgba(66,133,244,.04);border:1px solid #d2e3fc}.dismissButton:hover:focus-visible{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style><style>.gm-style-moc{background-color:rgba(0,0,0,.45);pointer-events:none;text-align:center;transition:opacity ease-in-out}.gm-style-mot{color:white;font-family:Roboto,Arial,sans-serif;font-size:22px;margin:0;position:relative;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+<title>Adminty - Premium Admin Template by Colorlib </title>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="#">
+<meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+<meta name="author" content="#">
+
+<link rel="icon" href="../files/assets/images/favicon.ico" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="stylesheet" href="../files/assets/pages/chart/radial/css/radial.css" type="text/css" media="all">
+
+<link rel="stylesheet" type="text/css" href="../files/assets/icon/feather/css/feather.css">
+
+<link href="css/appcrm.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../files/assets/css/jquery.mCustomScrollbar.css">
+<style type="text/css">/* Chart.js */
+/*
+ * DOM element rendering detection
+ * https://davidwalsh.name/detect-node-insertion
+ */
+@keyframes chartjs-render-animation {
+	from { opacity: 0.99; }
+	to { opacity: 1; }
+}
+
+.chartjs-render-monitor {
+	animation: chartjs-render-animation 0.001s;
+}
+
+/*
+ * DOM element resizing detection
+ * https://github.com/marcj/css-element-queries
+ */
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+	position: absolute;
+	direction: ltr;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	pointer-events: none;
+	visibility: hidden;
+	z-index: -1;
+}
+
+.chartjs-size-monitor-expand > div {
+	position: absolute;
+	width: 1000000px;
+	height: 1000000px;
+	left: 0;
+	top: 0;
+}
+
+.chartjs-size-monitor-shrink > div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	left: 0;
+	top: 0;
+}
+</style><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/49/8/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/49/8/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/49/8/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/49/8/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/49/8/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/49/8/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.google.com/maps-api-v3/api/js/49/8/onion.js"></script></head>
+
+<body themebg-pattern="pattern4">
+
+
+
+<div id="pcoded" class="pcoded iscollapsed" nav-type="st6" theme-layout="vertical" vertical-placement="left" vertical-layout="wide" pcoded-device-type="desktop" vertical-nav-type="expanded" vertical-effect="shrink" vnavigation-view="view1" fream-type="theme1" sidebar-img="false" sidebar-img-type="img1" layout-type="light">
+<div class="pcoded-overlay-box"></div>
+<div class="pcoded-container navbar-wrapper">
+<nav class="navbar header-navbar pcoded-header iscollapsed" header-theme="theme1" pcoded-header-position="fixed">
+<div class="navbar-wrapper">
+<div class="navbar-logo" logo-theme="theme1">
+
+
+
+</div>
+<div class="navbar-container">
+
+<ul class="nav-right">
+<li class="header-notification">
+<div class="dropdown-primary dropdown">
+<div class="dropdown-toggle" data-toggle="dropdown">
+<i class="feather icon-bell"></i>
+<span class="badge bg-c-pink">5</span>
+</div>
+<ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+<li>
+<h6>Notifications</h6>
+<label class="label label-danger">New</label>
+</li>
+<li>
+<div class="media">
+<img class="d-flex align-self-center img-radius" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+<div class="media-body">
+<h5 class="notification-user">Vendor Admin</h5>
+<p class="notification-msg">
+elit.</p>
+<span class="notification-time">30 minutes ago</span>
+</div>
+</div>
+</li>
+<li>
+<div class="media">
+<img class="d-flex align-self-center img-radius" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+<div class="media-body">
+<h5 class="notification-user">Joseph William</h5>
+<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
+elit.</p>
+<span class="notification-time">30 minutes ago</span>
+</div>
+</div>
+</li>
+<li>
+<div class="media">
+<img class="d-flex align-self-center img-radius" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+<div class="media-body">
+<h5 class="notification-user">Sara Soudein</h5>
+<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
+elit.</p>
+<span class="notification-time">30 minutes ago</span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="header-notification">
+<div class="dropdown-primary dropdown">
+<div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+<i class="feather icon-message-square"></i>
+<span class="badge bg-c-green">3</span>
+</div>
+</div>
+</li>
+<li class="user-profile header-notification">
+<div class="dropdown-primary dropdown">
+<div class="dropdown-toggle" data-toggle="dropdown">
+<img src="files/assets/images/avatar-4.png" class="img-radius" alt="User-Profile-Image">
+<span>Vendor Admin</span>
+<i class="feather icon-chevron-down"></i>
+</div>
+<ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+<li>
+<a href="#!">
+<i class="feather icon-settings"></i> Settings
+</a>
+</li>
+<li>
+<a href="user-profile.html">
+<i class="feather icon-user"></i> Profile
+</a>
+</li>
+<li>
+<a href="email-inbox.html">
+<i class="feather icon-mail"></i> My Messages
+</a>
+</li>
+<li>
+<a href="auth-lock-screen.html">
+<i class="feather icon-lock"></i> Lock Screen
+</a>
+</li>
+<li>
+<a href="auth-normal-sign-in.html">
+<i class="feather icon-log-out"></i> Logout
+</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+ </div>
+</nav>
+
+<div id="sidebar" class="users p-chat-user showChat">
+<div class="had-container">
+<div class="card card_main p-fixed users-main">
+<div class="user-box">
+<div class="chat-inner-header">
+<div class="back_chatBox">
+<div class="right-icon-control">
+<input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+<div class="form-icon">
+<i class="icofont icofont-search"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 545px;"><div class="main-friend-list" style="overflow: hidden; width: auto; height: 545px;">
+<div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="" data-original-title="Josephin Doe">
+<a class="media-left" href="#!">
+<img class="media-object img-radius img-radius" src="files/assets/images/avatar-4.png" alt="Generic placeholder image ">
+<div class="live-status bg-success"></div>
+</a>
+<div class="media-body">
+<div class="f-13 chat-header">Josephin Doe</div>
+</div>
+</div>
+<div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="" data-original-title="Lary Doe">
+<a class="media-left" href="#!">
+<img class="media-object img-radius" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+<div class="live-status bg-success"></div>
+</a>
+<div class="media-body">
+<div class="f-13 chat-header">Lary Doe</div>
+</div>
+</div>
+<div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="" data-original-title="Alice">
+<a class="media-left" href="#!">
+<img class="media-object img-radius" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+<div class="live-status bg-success"></div>
+</a>
+<div class="media-body">
+<div class="f-13 chat-header">Alice</div>
+</div>
+</div>
+<div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="" data-original-title="Alia">
+<a class="media-left" href="#!">
+<img class="media-object img-radius" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+<div class="live-status bg-success"></div>
+</a>
+<div class="media-body">
+<div class="f-13 chat-header">Alia</div>
+</div>
+</div>
+<div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="" data-original-title="Suzen">
+<a class="media-left" href="#!">
+<img class="media-object img-radius" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+<div class="live-status bg-success"></div>
+</a>
+<div class="media-body">
+<div class="f-13 chat-header">Suzen</div>
+</div>
+</div>
+</div><div class="slimScrollBar" style="background: rgb(27, 139, 249); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="showChat_inner">
+<div class="media chat-inner-header">
+<a class="back_chatBox">
+<i class="feather icon-chevron-left"></i> Josephin Doe
+</a>
+</div>
+<div class="media chat-messages">
+<a class="media-left photo-table" href="#!">
+<img class="media-object img-radius img-radius m-t-5" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+</a>
+<div class="media-body chat-menu-content">
+<div class="">
+<p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+<p class="chat-time">8:20 a.m.</p>
+</div>
+</div>
+</div>
+<div class="media chat-messages">
+<div class="media-body chat-menu-reply">
+<div class="">
+<p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+<p class="chat-time">8:20 a.m.</p>
+</div>
+</div>
+<div class="media-right photo-table">
+<a href="#!">
+<img class="media-object img-radius img-radius m-t-5" src="files/assets/images/avatar-4.png" alt="Generic placeholder image">
+</a>
+</div>
+</div>
+<div class="chat-reply-box p-b-20">
+<div class="right-icon-control">
+<input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+<div class="form-icon">
+<i class="feather icon-navigation"></i>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pcoded-main-container" style="margin-top: 56px;">
+<div class="pcoded-wrapper">
+<nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme1" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
+<div class="pcoded-inner-navbar main-menu mCustomScrollbar _mCS_1" id="" style="height: calc(100% - 80px);"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical_horizontal mCSB_inside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container_wrapper" class="mCSB_container_wrapper mCS_x_hidden mCS_no_scrollbar_x"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: -10px; left: 0px; width: 100%;" dir="ltr">
+<div class="pcoded-navigatio-lavel" menu-title-theme="theme5">Navigation</div>
+<ul class="pcoded-item pcoded-left-item" item-border="true" item-border-style="none" subitem-border="true">
+<li class="pcoded-hasmenu active pcoded-trigger" dropdown-icon="style1" subitem-icon="style1">
+<a href="javascript:void(0)">
+<span class="pcoded-micon"><i class="feather icon-home"></i></span>
+<span class="pcoded-mtext">Dashboard</span>
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+
+
+</div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 3px; max-height: 73px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div><div id="mCSB_1_scrollbar_horizontal" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_horizontal" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 30px; width: 0px; left: 0px;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+</nav>
+<div class="pcoded-content">
+<div class="pcoded-inner-content">
+<div class="main-body">
+<div class="page-wrapper">
+<div class="page-body">
+<div class="row">
+
+<div class="col-xl-3 col-md-6">
+<div class="card bg-c-yellow text-white">
+<div class="card-block">
+<div class="row align-items-center">
+<div class="col">
+<p class="m-b-5">New Customer</p>
+<h4 class="m-b-0">852</h4>
+</div>
+<div class="col col-auto text-right">
+<i class="feather icon-user f-50 text-c-yellow"></i>
+</div>
+</div>
+</div>
+</div>
+ </div>
+<div class="col-xl-3 col-md-6">
+<div class="card bg-c-green text-white">
+<div class="card-block">
+<div class="row align-items-center">
+<div class="col">
+<p class="m-b-5">Income</p>
+<h4 class="m-b-0">&#8377; 5,852</h4>
+</div>
+<div class="col col-auto text-right">
+<i class="feather icon-credit-card f-50 text-c-green"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-md-6">
+<div class="card bg-c-pink text-white">
+<div class="card-block">
+<div class="row align-items-center">
+<div class="col">
+<p class="m-b-5">Ticket</p>
+<h4 class="m-b-0">42</h4>
+</div>
+<div class="col col-auto text-right">
+<i class="feather icon-book f-50 text-c-pink"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-md-6">
+<div class="card bg-c-blue text-white">
+<div class="card-block">
+<div class="row align-items-center">
+<div class="col">
+<p class="m-b-5">Orders</p>
+<h4 class="m-b-0">&#8377; 5,242</h4>
+</div>
+<div class="col col-auto text-right">
+<i class="feather icon-shopping-cart f-50 text-c-blue"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-xl-8 col-md-12">
+<div class="card">
+ <div class="card-header">
+<div class="card-header-left ">
+<h5>Monthly View</h5>
+
+</div>
+</div>
+<div class="card-block-big">
+<div id="monthly-graph" style="height: 250px; overflow: hidden; text-align: left;">
+    <div class="amcharts-main-div" style="position: relative;">
+        <div class="amcharts-chart-div" 
+        style="overflow: hidden; position: relative; text-align: left; width: 608px; height: 250px; padding: 0px; touch-action: auto;"><svg version="1.1" style="position: absolute; width: 608px; height: 250px; top: 0.09375px; left: -0.203125px;">
+            
+        <g>
+            <path cs="100,100" d="M0.5,0.5 L607.5,0.5 L607.5,249.5 L0.5,249.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-bg"></path><path cs="100,100" d="M0.5,0.5 L526.5,0.5 L526.5,199.5 L0.5,199.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-plot-area" transform="translate(71,20)"></path></g><g><g class="amcharts-category-axis" transform="translate(71,20)"><g><path cs="100,100" d="M0.5,0.5 L0.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M0.5,199.5 L0.5,199.5 L0.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M35.5,0.5 L35.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M35.5,199.5 L35.5,199.5 L35.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M70.5,0.5 L70.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M70.5,199.5 L70.5,199.5 L70.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M105.5,0.5 L105.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M105.5,199.5 L105.5,199.5 L105.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M140.5,0.5 L140.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M140.5,199.5 L140.5,199.5 L140.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M175.5,0.5 L175.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M175.5,199.5 L175.5,199.5 L175.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M210.5,0.5 L210.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M210.5,199.5 L210.5,199.5 L210.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M245.5,0.5 L245.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M245.5,199.5 L245.5,199.5 L245.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M281.5,0.5 L281.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M281.5,199.5 L281.5,199.5 L281.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M316.5,0.5 L316.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M316.5,199.5 L316.5,199.5 L316.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M351.5,0.5 L351.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M351.5,199.5 L351.5,199.5 L351.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M386.5,0.5 L386.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M386.5,199.5 L386.5,199.5 L386.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M421.5,0.5 L421.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M421.5,199.5 L421.5,199.5 L421.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M456.5,0.5 L456.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M456.5,199.5 L456.5,199.5 L456.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M491.5,0.5 L491.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M491.5,199.5 L491.5,199.5 L491.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M526.5,0.5 L526.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(0,199)" class="amcharts-axis-tick"></path><path cs="100,100" d="M526.5,199.5 L526.5,199.5 L526.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#FFFFFF" class="amcharts-axis-grid"></path></g></g><g class="amcharts-value-axis value-axis-a1" transform="translate(71,20)" visibility="visible"></g><g class="amcharts-value-axis value-axis-a2" transform="translate(71,20)" visibility="visible"></g><g class="amcharts-value-axis value-axis-a3" transform="translate(71,20)" visibility="visible"></g></g><g></g><g></g><g></g><g></g><g><g transform="translate(71,20)" class="amcharts-graph-column amcharts-graph-g1"><g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(4,199)" visibility="visible" aria-label="distance Jan 01, 2012 227"><path cs="100,100" d="M0.5,0.5 L0.5,-10.5 L28.5,-10.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(39,199)" visibility="visible" aria-label="distance Jan 02, 2012 371"><path cs="100,100" d="M0.5,0.5 L0.5,-67.5 L28.5,-67.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(74,199)" visibility="visible" aria-label="distance Jan 03, 2012 433"><path cs="100,100" d="M0.5,0.5 L0.5,-92.5 L28.5,-92.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(109,199)" visibility="visible" aria-label="distance Jan 04, 2012 345"><path cs="100,100" d="M0.5,0.5 L0.5,-57.5 L28.5,-57.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(144,199)" visibility="visible" aria-label="distance Jan 05, 2012 480"><path cs="100,100" d="M0.5,0.5 L0.5,-110.5 L28.5,-110.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(179,199)" visibility="visible" aria-label="distance Jan 06, 2012 386"><path cs="100,100" d="M0.5,0.5 L0.5,-73.5 L28.5,-73.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(214,199)" visibility="visible" aria-label="distance Jan 07, 2012 348"><path cs="100,100" d="M0.5,0.5 L0.5,-58.5 L28.5,-58.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(249,199)" visibility="visible" aria-label="distance Jan 08, 2012 238"><path cs="100,100" d="M0.5,0.5 L0.5,-14.5 L28.5,-14.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(284,199)" visibility="visible" aria-label="distance Jan 09, 2012 218"><path cs="100,100" d="M0.5,0.5 L0.5,-6.5 L28.5,-6.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(319,199)" visibility="visible" aria-label="distance Jan 10, 2012 349">
+                <path cs="100,100" d="M0.5,0.5 L0.5,-58.5 L28.5,-58.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(354,199)" visibility="visible" aria-label="distance Jan 11, 2012 603"><path cs="100,100" d="M0.5,0.5 L0.5,-159.5 L28.5,-159.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(389,199)" visibility="visible" aria-label="distance Jan 12, 2012 534"><path cs="100,100" d="M0.5,0.5 L0.5,-132.5 L28.5,-132.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.9" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-g1" transform="translate(424,199)" visibility="visible" aria-label="distance Jan 13, 2012 425"><path cs="100,100" d="M0.5,0.5 L0.5,-89.5 L28.5,-89.5 L28.5,0.5 L0.5,0.5 Z" fill="#01a9ac" stroke="#01a9ac" fill-opacity="0.4" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g></g></g><g transform="translate(71,20)" class="amcharts-graph-line amcharts-graph-g2"><g></g><g clip-path="url(#AmChartsEl-1)"><path cs="100,100" d="M18.5,34.6484 L53.5,49.1356 L88.5,86.3088 L123.5,117.114 L158.5,153.0932 L193.5,116.2384 L228.5,120.3776 L263.5,121.8104 L298.5,97.612 L333.5,76.1996 L368.5,47.464 L403.5,42.3696 L438.5,34.33 L473.5,71.344 M0,0 L0,0" fill="none" stroke-width="2" stroke-dasharray="8" stroke-opacity="0.9" stroke="#303549" stroke-linejoin="round" class="amcharts-graph-stroke"></path></g><clipPath id="AmChartsEl-1"><rect x="0" y="0" width="526" height="199" rx="0" ry="0" stroke-width="0"></rect></clipPath><g></g></g><g transform="translate(71,20)" class="amcharts-graph-smoothedLine amcharts-graph-g3"><g></g><g clip-path="url(#AmChartsEl-2)"><path cs="100,100" d="M18,147 C27,146,36,131,53,129 C71,127,71,108,88,109 C106,110,106,154,123,154 C141,155,141,125,158,124 C176,123,176,137,193,139 C211,140,211,146,228,148 C246,150,246,170,263,172 C281,173,281,180,298,177 C316,175,316,136,333,128 C351,121,351,31,368,27 C386,23,386,45,403,47 C421,50,421,78,438,82 C456,86,464,129,473,132 M0,0 L0,0" fill="none" fill-opacity="0" stroke-width="2" stroke-opacity="0.9" stroke="#fe5d70" class="amcharts-graph-stroke"></path></g><clipPath id="AmChartsEl-2"><rect x="0" y="0" width="526" height="199" rx="0" ry="0" stroke-width="0"></rect></clipPath><g></g></g></g><g></g><g><g class="amcharts-category-axis"><path cs="100,100" d="M0.5,0.5 L526.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#555555" transform="translate(71,219)" class="amcharts-axis-line"></path></g><g class="amcharts-value-axis value-axis-a1"><path cs="100,100" d="M0.5,0.5 L0.5,199.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(71,20)" class="amcharts-axis-line" visibility="visible"></path></g><g class="amcharts-value-axis value-axis-a2"><path cs="100,100" d="M0.5,0.5 L0.5,199.5 L0.5,199.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(597,20)" class="amcharts-axis-line" visibility="visible"></path></g><g class="amcharts-value-axis value-axis-a3"><path cs="100,100" d="M0.5,0.5 L0.5,199.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(71,20)" class="amcharts-axis-line" visibility="visible"></path></g></g><g></g><g></g><g><g transform="translate(71,20)" class="amcharts-graph-column amcharts-graph-g1"></g><g transform="translate(71,20)" class="amcharts-graph-line amcharts-graph-g2"><circle r="12.5" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(18,34)" aria-label="latitude/city Jan 01, 2012 40.71" class="amcharts-graph-bullet"></circle><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" class="amcharts-graph-label" style="pointer-events: none;" transform="translate(34,34)"><tspan y="6" x="0">Delhi</tspan></text><circle r="7" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(53,49)" aria-label="latitude/city Jan 02, 2012 38.89" class="amcharts-graph-bullet"></circle><circle r="3" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(88,86)" aria-label="latitude/city Jan 03, 2012 34.22" class="amcharts-graph-bullet"></circle><circle r="3.5" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(123,117)" aria-label="latitude/city Jan 04, 2012 30.35" class="amcharts-graph-bullet"></circle><circle r="5" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(158,153)" aria-label="latitude/city Jan 05, 2012 25.83" class="amcharts-graph-bullet"></circle><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" class="amcharts-graph-label" style="pointer-events: none;" transform="translate(166,153)"><tspan y="6" x="0">Miami</tspan></text><circle r="3.5" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(193,116)" aria-label="latitude/city Jan 06, 2012 30.46" class="amcharts-graph-bullet"></circle><circle r="5" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(228,120)" aria-label="latitude/city Jan 07, 2012 29.94" class="amcharts-graph-bullet"></circle><circle r="8" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(263,121)" aria-label="latitude/city Jan 08, 2012 29.76" class="amcharts-graph-bullet"></circle><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" class="amcharts-graph-label" style="pointer-events: none;" transform="translate(274,121)"><tspan y="6" x="0">Gujarat</tspan></text><circle r="8.5" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(298,97)" aria-label="latitude/city Jan 09, 2012 32.8" class="amcharts-graph-bullet"></circle><circle r="5.5" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(333,76)" aria-label="latitude/city Jan 10, 2012 35.49" class="amcharts-graph-bullet"></circle><circle r="5" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(368,47)" aria-label="latitude/city Jan 11, 2012 39.1" class="amcharts-graph-bullet"></circle><circle r="9" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(403,42)" aria-label="latitude/city Jan 12, 2012 39.74" class="amcharts-graph-bullet"></circle><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" class="amcharts-graph-label" style="pointer-events: none;" transform="translate(415,42)"><tspan y="6" x="0">TamilNadu</tspan></text><circle r="6" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(438,34)" aria-label="latitude/city Jan 13, 2012 40.75" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#0ac282" stroke="#01a9ac" fill-opacity="1" stroke-width="2" stroke-opacity="1" transform="translate(473,71)" aria-label="latitude/city Jan 14, 2012 36.1" class="amcharts-graph-bullet lastBullet"></circle><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" class="amcharts-graph-label" style="pointer-events: none;" transform="translate(480,71)"><tspan y="6" x="0">Las Vegas</tspan></text></g><g transform="translate(71,20)" class="amcharts-graph-smoothedLine amcharts-graph-g3"><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(18,147)" aria-label="duration Jan 01, 2012 408" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(53,129)" aria-label="duration Jan 02, 2012 482" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(88,109)" aria-label="duration Jan 03, 2012 562" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(123,154)" aria-label="duration Jan 04, 2012 379" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(158,124)" aria-label="duration Jan 05, 2012 501" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(193,139)" aria-label="duration Jan 06, 2012 443" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(228,148)" aria-label="duration Jan 07, 2012 405" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" 
+                    fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(263,172)" aria-label="duration Jan 08, 2012 309" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(298,177)" aria-label="duration Jan 09, 2012 287" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(333,128)" aria-label="duration Jan 10, 2012 485" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(368,27)" aria-label="duration Jan 11, 2012 890" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(403,47)" aria-label="duration Jan 12, 2012 810" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(438,82)" aria-label="duration Jan 13, 2012 670" class="amcharts-graph-bullet"></circle><circle r="4" cx="0" cy="0" fill="#fe5d70" stroke="#fe5d70" fill-opacity="1" stroke-width="1" stroke-opacity="1" transform="translate(473,132)" aria-label="duration Jan 14, 2012 470" class="amcharts-graph-bullet"></circle></g></g><g><g></g></g><g><g class="amcharts-category-axis" transform="translate(71,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" font-weight="bold" text-anchor="middle" transform="translate(17.53333334686214,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">Jan</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(52.533333346862136,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">02</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(87.53333334686214,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">03</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(122.53333334686214,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">04</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(157.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">05</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(192.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">06</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(227.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">07</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(262.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">08</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(298.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">09</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(333.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">10</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(368.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">11</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(403.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">12</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(438.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">13</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(473.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">14</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(508.53333334686215,211.5)" class="amcharts-axis-label"><tspan y="6" x="0">15</tspan></text></g><g class="amcharts-value-axis value-axis-a1" transform="translate(71,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,198)" class="amcharts-axis-label"><tspan y="6" x="0">200</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,158)" class="amcharts-axis-label"><tspan y="6" x="0">300</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,118)" class="amcharts-axis-label"><tspan y="6" x="0">400</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,79)" class="amcharts-axis-label"><tspan y="6" x="0">500</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,39)" class="amcharts-axis-label"><tspan y="6" x="0">600</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,-1)" class="amcharts-axis-label"><tspan y="6" x="0">
+                        
+                    
+                        </a></div></div>
+                    </div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-md-12">
+<div class="card feed-card">
+<div class="card-header">
+<h5>Feeds</h5>
+</div>
+<div class="card-block">
+<div class="row m-b-30">
+<div class="col-auto p-r-0">
+<i class="feather icon-bell bg-simple-c-blue feed-icon"></i>
+</div>
+<div class="col">
+<h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted f-right f-13">Just Now</span>
+</h6>
+</div>
+</div>
+<div class="row m-b-30">
+<div class="col-auto p-r-0">
+<i class="feather icon-shopping-cart bg-simple-c-pink feed-icon"></i>
+</div>
+<div class="col">
+<h6 class="m-b-5">New order received <span class="text-muted f-right f-13">Just Now</span>
+</h6>
+</div>
+</div>
+<div class="row m-b-30">
+<div class="col-auto p-r-0">
+<i class="feather icon-file-text bg-simple-c-green feed-icon"></i>
+</div>
+<div class="col">
+<h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted f-right f-13">Just Now</span>
+</h6>
+</div>
+</div>
+<div class="row m-b-30">
+<div class="col-auto p-r-0">
+<i class="feather icon-shopping-cart bg-simple-c-pink feed-icon"></i>
+</div>
+<div class="col">
+<h6 class="m-b-5">New order received <span class="text-muted f-right f-13">Just Now</span>
+</h6>
+</div>
+</div>
+<div class="row m-b-30">
+<div class="col-auto p-r-0">
+<i class="feather icon-file-text bg-simple-c-green feed-icon"></i>
+</div>
+<div class="col">
+<h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted f-right f-13">Just Now</span>
+</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-xl-4 col-md-6">
+<div class="card"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+<div class="card-header">
+<h5>Total Leads</h5>
+<div class="card-header-right">
+<ul class="list-unstyled card-option">
+<li><i class="fa fa fa-wrench open-card-option"></i>
+</li>
+<li><i class="fa fa-window-maximize full-card"></i></li>
+<li><i class="fa fa-minus minimize-card"></i></li>
+<li><i class="fa fa-refresh reload-card"></i></li>
+<li><i class="fa fa-trash close-card"></i></li>
+</ul>
+</div>
+</div>
+<div class="card-block">
+<p class="text-c-green f-w-500"><i class="feather icon-chevrons-up m-r-5"></i> 18% High
+than last month</p>
+<div class="row">
+<div class="col-4 b-r-default">
+<p class="text-muted m-b-5">Overall</p>
+<h5>76.12%</h5>
+</div>
+<div class="col-4 b-r-default">
+<p class="text-muted m-b-5">Monthly</p>
+<h5>16.40%</h5>
+</div>
+<div class="col-4">
+<p class="text-muted m-b-5">Day</p>
+<h5>4.56%</h5>
+</div>
+</div>
+</div>
+<canvas id="tot-lead" height="150" style="display: block; width: 324px; height: 150px;" width="324" class="chartjs-render-monitor"></canvas>
+</div>
+</div>
+<div class="col-xl-4 col-md-6">
+<div class="card"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+<div class="card-header">
+<h5>Total Vendors</h5>
+<div class="card-header-right">
+<ul class="list-unstyled card-option">
+<li><i class="fa fa fa-wrench open-card-option"></i>
+</li>
+<li><i class="fa fa-window-maximize full-card"></i></li>
+<li><i class="fa fa-minus minimize-card"></i></li>
+<li><i class="fa fa-refresh reload-card"></i></li>
+<li><i class="fa fa-trash close-card"></i></li>
+</ul>
+</div>
+</div>
+<div class="card-block">
+<p class="text-c-pink f-w-500"><i class="feather icon-chevrons-down m-r-15"></i> 24% High
+than last month</p>
+<div class="row">
+<div class="col-4 b-r-default">
+<p class="text-muted m-b-5">Overall</p>
+<h5>68.52%</h5>
+</div>
+<div class="col-4 b-r-default">
+<p class="text-muted m-b-5">Monthly</p>
+<h5>28.90%</h5>
+</div>
+ <div class="col-4">
+<p class="text-muted m-b-5">Day</p>
+<h5>13.50%</h5>
+</div>
+</div>
+</div>
+<canvas id="tot-vendor" height="150" width="324" style="display: block; width: 324px; height: 150px;" class="chartjs-render-monitor"></canvas>
+</div>
+</div>
+<div class="col-xl-4 col-md-12">
+<div class="card"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+<div class="card-header">
+<h5>Invoice Generate</h5>
+<div class="card-header-right">
+<ul class="list-unstyled card-option">
+<li><i class="fa fa fa-wrench open-card-option"></i>
+</li>
+<li><i class="fa fa-window-maximize full-card"></i></li>
+<li><i class="fa fa-minus minimize-card"></i></li>
+<li><i class="fa fa-refresh reload-card"></i></li>
+<li><i class="fa fa-trash close-card"></i></li>
+</ul>
+</div>
+</div>
+<div class="card-block">
+<p class="text-c-green f-w-500"><i class="feather icon-chevrons-up m-r-15"></i> 20% High
+than last month</p>
+<div class="row">
+<div class="col-4 b-r-default">
+<p class="text-muted m-b-5">Overall</p>
+<h5>68.52%</h5>
+</div>
+<div class="col-4 b-r-default">
+<p class="text-muted m-b-5">Monthly</p>
+<h5>28.90%</h5>
+</div>
+<div class="col-4">
+<p class="text-muted m-b-5">Day</p>
+<h5>13.50%</h5>
+</div>
+</div>
+</div>
+<canvas id="invoice-gen" height="150" width="324" style="display: block; width: 324px; height: 150px;" class="chartjs-render-monitor"></canvas>
+</div>
+</div>
+
+
+<div class="col-xl-6 col-md-12">
+<div class="card table-card">
+<div class="card-header">
+<h5>Recent Tickets</h5>
+<div class="card-header-right">
+<ul class="list-unstyled card-option">
+<li><i class="fa fa fa-wrench open-card-option"></i>
+</li>
+<li><i class="fa fa-window-maximize full-card"></i></li>
+<li><i class="fa fa-minus minimize-card"></i></li>
+<li><i class="fa fa-refresh reload-card"></i></li>
+<li><i class="fa fa-trash close-card"></i></li>
+</ul>
+</div>
+</div>
+<div class="card-block">
+<div class="table-responsive">
+<table class="table table-hover table-borderless">
+<thead>
+<tr>
+<th>Status</th>
+<th>Subject</th>
+<th>Department</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><label class="label label-success">open</label>
+</td>
+<td>Website down for one week</td>
+<td>Support</td>
+<td>Today 2:00</td>
+</tr>
+<tr>
+<td><label class="label label-primary">progress</label>
+</td>
+<td>Loosing control on server</td>
+<td>Support</td>
+<td>Yesterday</td>
+</tr>
+<tr>
+<td><label class="label label-danger">closed</label>
+</td>
+<td>Authorizations keys</td>
+<td>Support</td>
+<td>27, Aug</td>
+</tr>
+<tr>
+<td><label class="label label-success">open</label>
+</td>
+<td>Restoring default settings</td>
+<td>Support</td>
+<td>Today 9:00</td>
+</tr>
+<tr>
+<td><label class="label label-primary">progress</label>
+</td>
+<td>Loosing control on server</td>
+<td>Support</td>
+<td>Yesterday</td>
+</tr>
+<tr>
+<td><label class="label label-success">open</label>
+</td>
+<td>Restoring default settings</td>
+<td>Support</td>
+<td>Today 9:00</td>
+</tr>
+<tr>
+<td><label class="label label-danger">closed</label>
+</td>
+<td>Authorizations keys</td>
+<td>Support</td>
+<td>27, Aug</td>
+</tr>
+<tr>
+<td><label class="label label-success">open</label>
+</td>
+<td>Restoring default settings</td>
+<td>Support</td>
+<td>Today 9:00</td>
+</tr>
+<tr>
+<td><label class="label label-primary">progress</label>
+</td>
+<td>Loosing control on server</td>
+<td>Support</td>
+<td>Yesterday</td>
+</tr>
+</tbody>
+</table>
+<div class="text-right m-r-20">
+<a href="#!" class=" b-b-primary text-primary">View all
+Projects</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-6 col-md-12">
+<div class="card latest-update-card">
+<div class="card-header">
+<h5>Latest Updates</h5>
+<div class="card-header-right">
+<ul class="list-unstyled card-option">
+<li><i class="fa fa fa-wrench open-card-option"></i>
+</li>
+<li><i class="fa fa-window-maximize full-card"></i></li>
+<li><i class="fa fa-minus minimize-card"></i></li>
+<li><i class="fa fa-refresh reload-card"></i></li>
+<li><i class="fa fa-trash close-card"></i></li>
+</ul>
+</div>
+</div>
+<div class="card-block">
+<div class="latest-update-box">
+<div class="row p-t-20 p-b-30">
+<div class="col-auto text-right update-meta">
+<p class="text-muted m-b-0 d-inline">2 hrs ago</p>
+<i class="feather icon-twitter bg-info update-icon"></i>
+</div>
+<div class="col">
+<h6>+ 1652 Followers</h6>
+<p class="text-muted m-b-0">You’re getting more and
+more followers, keep it up!</p>
+</div>
+</div>
+<div class="row p-b-30">
+<div class="col-auto text-right update-meta">
+<p class="text-muted m-b-0 d-inline">4 hrs ago</p>
+<i class="feather icon-briefcase bg-simple-c-pink update-icon"></i>
+</div>
+<div class="col">
+<h6>+ 5 New Products were added!</h6>
+<p class="text-muted m-b-0">Congratulations!</p>
+</div>
+</div>
+<div class="row p-b-30">
+<div class="col-auto text-right update-meta">
+<p class="text-muted m-b-0 d-inline">1 day ago</p>
+<i class="feather icon-check bg-simple-c-yellow  update-icon"></i>
+</div>
+<div class="col">
+<h6>Database backup completed!</h6>
+<p class="text-muted m-b-0">Download the <span class="text-c-blue">latest backup</span>.
+</p>
+</div>
+</div>
+<div class="row p-b-0">
+<div class="col-auto text-right update-meta">
+<p class="text-muted m-b-0 d-inline">2 day ago</p>
+<i class="feather icon-facebook bg-simple-c-green update-icon"></i>
+</div>
+<div class="col">
+<h6>+2 Friend Requests</h6>
+<p class="text-muted m-b-10">This is great, keep it
+up!</p>
+<div class="table-responsive">
+<table class="table table-hover">
+<tbody><tr>
+<td class="b-none">
+<a href="#!" class="align-middle">
+<img src="files/assets/images/avatar-4.png" alt="user image" class="img-radius img-40 align-top m-r-15">
+<div class="d-inline-block">
+<h6>Jeny William</h6>
+<p class="text-muted m-b-0">
+Graphic Designer</p>
+</div>
+</a>
+</td>
+</tr>
+<tr>
+<td class="b-none">
+<a href="#!" class="align-middle">
+<img src="files/assets/images/avatar-4.png" alt="user image" class="img-radius img-40 align-top m-r-15">
+<div class="d-inline-block">
+<h6>John Deo</h6>
+<p class="text-muted m-b-0">
+Web Designer</p>
+</div>
+</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+<a href="#!" class="b-b-primary text-primary">View all
+Projects</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-xl-8 col-md-12">
+<div class="card latest-activity-card">
+<div class="card-header">
+<h5>Latest Activity</h5>
+</div>
+<div class="card-block">
+<div class="latest-update-box">
+<div class="row p-t-20 p-b-30">
+<div class="col-auto text-right update-meta">
+<p class="text-muted m-b-0 d-inline">just now</p>
+<i class="feather icon-sunrise bg-simple-c-blue update-icon"></i>
+</div>
+<div class="col">
+<h6>John Deo</h6>
+<p class="text-muted m-b-15">The trip was an amazing
+and a life changing experience!!</p>
+<img src="../files/assets/images/mega-menu/01.jpg" alt="" class="img-fluid img-100 m-r-15 m-b-10">
+<img src="../files/assets/images/mega-menu/03.jpg" alt="" class="img-fluid img-100 m-r-15 m-b-10">
+</div>
+</div>
+<div class="row p-b-30">
+<div class="col-auto text-right update-meta">
+<p class="text-muted m-b-0 d-inline">5 min ago</p>
+<i class="feather icon-file-text bg-simple-c-blue update-icon"></i>
+</div>
+<div class="col">
+<h6>Administrator</h6>
+<p class="text-muted m-b-0">Free courses for all our
+customers at A1 Conference Room - 9:00 am
+tomorrow!</p>
+</div>
+</div>
+<div class="row p-b-30">
+<div class="col-auto text-right update-meta">
+<p class="text-muted m-b-0 d-inline">3 hours ago</p>
+<i class="feather icon-map-pin bg-simple-c-blue update-icon"></i>
+</div>
+<div class="col">
+<h6>Jeny William</h6>
+<p class="text-muted m-b-15">Happy Hour! Free drinks
+at <span class="text-c-blue">Cafe-Bar all
+</span>day long!</p>
+
+</div>
+</div>
+</div>
+<div class="text-right">
+<a href="#!" class=" b-b-primary text-primary">View all
+Activity</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-md-12">
+<div class="card per-task-card">
+<div class="card-header">
+<h5>Your Tasks</h5>
+</div>
+<div class="card-block">
+<div class="row per-task-block text-center">
+<div class="col-6">
+<div data-label="45%" class="radial-bar radial-bar-45 radial-bar-lg radial-bar-primary">
+</div>
+<h6 class="text-muted">Finished</h6>
+<p class="text-muted">642</p>
+<button class="btn btn-primary btn-round btn-sm">Manage</button>
+ </div>
+<div class="col-6">
+<div data-label="30%" class="radial-bar radial-bar-30 radial-bar-lg radial-bar-primary">
+</div>
+<h6 class="text-muted">Remaining</h6>
+<p class="text-muted">495</p>
+<button class="btn btn-primary btn-outline-primary btn-round btn-sm">Manage</button>
+</div>
+</div>
+</div>
+</div>
+<div class="card feed-card">
+<div class="card-header">
+<h5>Upcoming Deadlines</h5>
+<div class="card-header-right">
+<ul class="list-unstyled card-option">
+<li><i class="fa fa fa-wrench open-card-option"></i>
+</li>
+<li><i class="fa fa-window-maximize full-card"></i></li>
+<li><i class="fa fa-minus minimize-card"></i></li>
+<li><i class="fa fa-refresh reload-card"></i></li>
+<li><i class="fa fa-trash close-card"></i></li>
+</ul>
+</div>
+</div>
+<div class="card-block">
+<div class="row m-b-25">
+<div class="col-auto p-r-0">
+<img src="files/assets/images/avatar-4.png" alt="" class="img-fluid img-50">
+</div>
+<div class="col">
+<h6 class="m-b-5">New able - Redesign</h6>
+<p class="text-c-pink m-b-0">2 Days Remaining</p>
+</div>
+</div>
+<div class="row m-b-25">
+<div class="col-auto p-r-0">
+<img src="files/assets/images/avatar-4.png" alt="" class="img-fluid img-50">
+</div>
+<div class="col">
+<h6 class="m-b-5">New Admin Dashboard</h6>
+<p class="text-c-pink m-b-0">Proposal in 6 Days</p>
+</div>
+</div>
+<div class="row m-b-25">
+<div class="col-auto p-r-0">
+<img src="files/assets/images/avatar-4.png" alt="" class="img-fluid img-50">
+</div>
+<div class="col">
+<h6 class="m-b-5">Solar Panel Design</h6>
+<p class="text-c-green m-b-0">10 Days Remaining</p>
+</div>
+</div>
+<div class="text-center">
+<a href="#!" class="b-b-primary text-primary">View all
+Feeds</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="styleSelector">
+<div class="selector-toggle"><a href="javascript:void(0)"></a></div><ul><li><p class="selector-title main-title st-main-title"><b>Adminty </b>Customizer</p><span class="text-muted">Live customizer with tons of options</span></li><li><p class="selector-title">Main layouts</p></li><li><div class="theme-color"><a href="#" class="navbar-theme" navbar-theme="themelight1"><span class="head"></span><span class="cont"></span></a><a href="#" class="navbar-theme" navbar-theme="theme1"><span class="head"></span><span class="cont"></span></a></div></li></ul><div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 440px);"><div class="style-cont m-t-10" style="overflow: hidden; width: auto; height: calc(100vh - 440px);"><ul class="nav nav-tabs  tabs" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#sel-layout" role="tab">Layouts</a></li><li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sel-sidebar-setting" role="tab">Sidebar Settings</a></li></ul><div class="tab-content tabs"><div class="tab-pane active" id="sel-layout" role="tabpanel"><ul><li class="theme-option"><div class="checkbox-fade fade-in-primary"><label><input type="checkbox" value="false" id="sidebar-position" name="sidebar-position" checked=""><span class="cr"><i class="cr-icon feather icon-check txt-success f-w-600"></i></span><span>Fixed Sidebar Position</span></label></div></li><li class="theme-option"><div class="checkbox-fade fade-in-primary"><label><input type="checkbox" value="false" id="header-position" name="header-position" checked=""><span class="cr"><i class="cr-icon feather icon-check txt-success f-w-600"></i></span><span>Fixed Header Position</span></label></div></li></ul></div><div class="tab-pane" id="sel-sidebar-setting" role="tabpanel"><ul><li class="theme-option"><p class="sub-title drp-title">Menu Type</p><div class="form-radio" id="menu-effect"><div class="radio radio-inverse radio-inline" data-toggle="tooltip" title="" data-original-title="simple icon"><label><input type="radio" name="radio" value="st6" onclick="handlemenutype(this.value)" checked="true"><i class="helper"></i><span class="micon st6"><i class="feather icon-command"></i></span></label></div><div class="radio  radio-primary radio-inline" data-toggle="tooltip" title="" data-original-title="color icon"><label><input type="radio" name="radio" value="st5" onclick="handlemenutype(this.value)"><i class="helper"></i><span class="micon st5"><i class="feather icon-command"></i></span></label></div></div></li><li class="theme-option"><p class="sub-title drp-title">SideBar Effect</p><select id="vertical-menu-effect" class="form-control minimal"><option name="vertical-menu-effect" value="shrink">shrink</option><option name="vertical-menu-effect" value="overlay">overlay</option><option name="vertical-menu-effect" value="push">Push</option></select></li><li class="theme-option"><p class="sub-title drp-title">Hide/Show Border</p><select id="vertical-border-style" class="form-control minimal"><option name="vertical-border-style" value="solid">Style 1</option><option name="vertical-border-style" value="dotted">Style 2</option><option name="vertical-border-style" value="dashed">Style 3</option><option name="vertical-border-style" value="none">No Border</option></select></li><li class="theme-option"><p class="sub-title drp-title">Drop-Down Icon</p><select id="vertical-dropdown-icon" class="form-control minimal"><option name="vertical-dropdown-icon" value="style1">Style 1</option><option name="vertical-dropdown-icon" value="style2">style 2</option><option name="vertical-dropdown-icon" value="style3">style 3</option></select></li><li class="theme-option"><p class="sub-title drp-title">Sub Menu Drop-down Icon</p><select id="vertical-subitem-icon" class="form-control minimal"><option name="vertical-subitem-icon" value="style1">Style 1</option><option name="vertical-subitem-icon" value="style2">style 2</option><option name="vertical-subitem-icon" value="style3">style 3</option><option name="vertical-subitem-icon" value="style4">style 4</option><option name="vertical-subitem-icon" value="style5">style 5</option><option name="vertical-subitem-icon" value="style6">style 6</option></select></li></ul></div><ul><li><p class="selector-title">Header Brand color</p></li><li class="theme-option"><div class="theme-color"><a href="#" class="logo-theme" logo-theme="theme1"><span class="head"></span><span class="cont"></span></a><a href="#" class="logo-theme" logo-theme="theme2"><span class="head"></span><span class="cont"></span></a><a href="#" class="logo-theme" logo-theme="theme3"><span class="head"></span><span class="cont"></span></a><a href="#" class="logo-theme" logo-theme="theme4"><span class="head"></span><span class="cont"></span></a><a href="#" class="logo-theme" logo-theme="theme5"><span class="head"></span><span class="cont"></span></a></div></li><li><p class="selector-title">Header color</p></li><li class="theme-option"><div class="theme-color"><a href="#" class="header-theme" header-theme="theme1"><span class="head"></span><span class="cont"></span></a><a href="#" class="header-theme" header-theme="theme2"><span class="head"></span><span class="cont"></span></a><a href="#" class="header-theme" header-theme="theme3"><span class="head"></span><span class="cont"></span></a><a href="#" class="header-theme" header-theme="theme4"><span class="head"></span><span class="cont"></span></a><a href="#" class="header-theme" header-theme="theme5"><span class="head"></span><span class="cont"></span></a><a href="#" class="header-theme" header-theme="theme6"><span class="head"></span><span class="cont"></span></a></div></li><li><p class="selector-title">Active link color</p></li><li class="theme-option"><div class="theme-color"><a href="#" class="active-item-theme small" active-item-theme="theme1">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme2">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme3">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme4">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme5">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme6">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme7">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme8">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme9">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme10">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme11">&nbsp;</a><a href="#" class="active-item-theme small" active-item-theme="theme12">&nbsp;</a></div></li><li><p class="selector-title">Menu Caption Color</p></li><li class="theme-option"><div class="theme-color"><a href="#" class="leftheader-theme small" lheader-theme="theme1">&nbsp;</a><a href="#" class="leftheader-theme small" lheader-theme="theme2">&nbsp;</a><a href="#" class="leftheader-theme small" lheader-theme="theme3">&nbsp;</a><a href="#" class="leftheader-theme small" lheader-theme="theme4">&nbsp;</a><a href="#" class="leftheader-theme small" lheader-theme="theme5">&nbsp;</a><a href="#" class="leftheader-theme small" lheader-theme="theme6">&nbsp;</a></div></li></ul></div></div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 60.7904px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div><ul><li><a href="http://html.codedthemes.com/Adminty/doc" target="_blank" class="btn btn-primary btn-block m-r-15 m-t-5 m-b-10">Online Documentation</a></li><li class="text-center"><span class="text-center f-18 m-t-15 m-b-15 d-block">Thank you for sharing !</span><a href="#!" target="_blank" class="btn btn-facebook soc-icon m-b-20"><i class="feather icon-facebook"></i></a><a href="#!" target="_blank" class="btn btn-twitter soc-icon m-l-20 m-b-20"><i class="feather icon-twitter"></i></a></li></ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="../files/assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="../files/assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="../files/assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="../files/assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="../files/assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>>
+<script type="text/javascript" src="../files/bower_components/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+<script type="text/javascript" src="files/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+<script type="text/javascript" src="files/bower_components/modernizr/modernizr.js"></script>
+<script type="text/javascript" src="files/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+
+<script type="text/javascript" src="files/bower_components/chart.js/dist/Chart.js"></script>
+
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="files/assets/pages/google-maps/gmaps.js"></script>
+
+<script src="files/assets/pages/widget/gauge/gauge.min.js "></script>
+<script src="files/assets/pages/widget/amchart/amcharts.js"></script>
+<script src="files/assets/pages/widget/amchart/serial.js"></script>
+<script src="files/assets/pages/widget/amchart/gauge.js"></script>
+<script src="files/assets/pages/widget/amchart/pie.js"></script>
+<script src="files/assets/pages/widget/amchart/light.js"></script>
+
+<script src="files/assets/js/pcoded.min.js"></script>
+<script src="files/assets/js/vartical-layout.min.js"></script>
+<script src="files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script  src="files/assets/pages/dashboard/crm-dashboard.min.js"></script>
+<script type="text/javascript" src="files/assets/js/script.js"></script>
+
+</body></html>
