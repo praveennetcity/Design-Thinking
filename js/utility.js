@@ -18,10 +18,15 @@ function updateStateDropDown() {
    $("#stateselect").val($("#entryselect").val());
 }
 
+function submit(){
+      $("#submission").show();
+}
+
 $(document).ready(function() {
     $("#signup").hide();
     $("#calculatorstart").hide();
     $("#calculatorEnter").hide();
+    $("#submission").hide();
     
 });
 
